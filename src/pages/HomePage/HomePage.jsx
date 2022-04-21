@@ -1,13 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { useForm } from 'react-hook-form';
+
 
 export default function HomePage() {
+
+
+ 
+ 
+
+
   return (
     <div>
     
     
     
     
-    <h1>Esta es la home page</h1>
+    
     
     
     
