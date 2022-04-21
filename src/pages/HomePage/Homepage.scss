@@ -9,4 +9,38 @@
     border: 0ch;
     border-radius: 4px;
     color: orange;
+
+}
+
+.userHome{
+
+
+    &__details{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      &__calendarOne{
+        margin: 8px 5px 0 0;
+        height: 60px;
+        width: 156px;
+        background-color: rgba(175, 175, 175, 0.329);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: 0px 0px 4px rgba(76, 76, 76, 0.5);
+      }
+      &__h3{
+        margin: 0;
+        font-family: 'noto-font';
+        font-size: 9.5px;
+      }
+
+&__input{
+    width: 95%;
+    background-color: transparent;
+    color: transparent;
+}
 }
