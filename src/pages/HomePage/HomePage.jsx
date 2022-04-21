@@ -5,12 +5,15 @@ import { useForm } from 'react-hook-form';
 export default function HomePage() {
 
 
- 
- 
-
-
   return (
+    <form >
     <div>
+      <label>
+        Deposito 
+        <input type="date"/>
+        <input type="date"/>
+
+      </label>
     
     
     
@@ -23,7 +26,7 @@ export default function HomePage() {
     
     
     
-    </div>
+    </div></form>
 
 
 
