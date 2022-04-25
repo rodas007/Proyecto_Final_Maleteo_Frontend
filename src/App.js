@@ -40,7 +40,7 @@ function App() {
           <Route path="/complete" element={<RequireAuth><ReserveCompletePage /></RequireAuth>} />
           <Route path="/*" element={<Navigate to="/login"/>}/>
         </Routes>
-      </div>
+      </div> to
     </Router>
 </JwtContext.Provider>
 
