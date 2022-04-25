@@ -3,14 +3,7 @@
     align-items: center;
     justify-content: center;
 }
-.btn_form{
-    display: flex;
-    align-items: flex-end;
-    border: 0ch;
-    border-radius: 4px;
-    color: orange;
 
-}
 
 .userHome{
 
@@ -21,26 +14,131 @@
         align-items: center;
       }
       &__calendarOne{
-        margin: 8px 5px 0 0;
-        height: 60px;
-        width: 156px;
-        background-color: rgba(175, 175, 175, 0.329);
+        margin-top: 40px ;
+        height: 40px;
+        width: 100px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 8px;
-        box-shadow: 0px 0px 4px rgba(76, 76, 76, 0.5);
+       
       }
+     
+      &__calendarTwo{
+        margin-top: 40px ;
+        
+        height: 40px;
+        width: 100px;
+        display: flex;
+       justify-content: center;
+        align-items: center;
+        
+      }
+      
       &__h3{
         margin: 0;
         font-family: 'noto-font';
         font-size: 9.5px;
       }
-
+  
+      
 &__input{
     width: 95%;
     background-color: transparent;
     color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-color: white;
 }
+
+}
+
+.swiper-slide{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+  
+}
+
+.b-Globalform{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-evenly;
+  margin-right: 25%
+  
+ 
+}
+.form-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 50px;
+  
+ 
+
+ 
+}
+
+
+.Buscador-de-pega{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  width: 200px;
+}
+.lupa{
+  display: flex;
+  margin-right: 3px;
+}
+
+
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.b-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #F68F24;
+  border-color: #F68F24;
+  border-radius: 7px;
+  text-decoration: none;
+  width: bold;
+  font-size: xx-large;
+}
+.btn-form{
+  background-color:#F68F24;
+  border-color: #F68F24;
+  border-radius: 4px;
+  text-decoration: none;
+ margin-left: 20px;
+ 
+ text-align: center;
+ color: white;
+ width: 100px;
+ outline: none;
+ display: inline-block;
+ 
+}
+
+.userHome__calendarPieces{
+  width: 100px;
+  background-color: #958e87;
+  
+}
+.b-experiencias{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: column;
 }
