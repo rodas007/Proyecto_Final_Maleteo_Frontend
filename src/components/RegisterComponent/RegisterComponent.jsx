@@ -1,20 +1,38 @@
-import React from "react";
+import React from 'react'
 import { useForm } from "react-hook-form";
+import { API } from '../../services/api';
+
 import "./RegisterComponent.scss";
 
 export function RegisterComponent() {
  
+  const { register, handleSubmit } = useForm();
+
+
+  const onSubmit = formData => {
+    API.post('register', formData).then(res => {
+        console.log('Register user',);
+    })
+}
+
+
 
   return (
     <div className="c-register">
-      <form  className="c-register__form">
+      <form   className="c-register__form"  onSubmit={handleSubmit(onSubmit)}>
         <label className="c-register__label" htmlFor="email">
           <span className="b-subtitle">Direccion de correo electronico</span>
 
           <input
             className="c-register__input"
-            name="email"
-            id="email"
+            type="email"
+            placeholder="Email"
+              id="email"
+              defaultValue=""
+              {...register("email", {
+                required: true,
+                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+              })}
             
           />
           
@@ -24,8 +42,11 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            name="name"
-            id="name"
+            placeholder="Name"
+              id="name"
+              defaultValue=""
+              {...register("name", {
+                required: true,})}
            
           />
           
@@ -35,9 +56,12 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            name="surname"
-            id="lastName"
-            
+            placeholder="SurName"
+              id="surname"
+              defaultValue=""
+              {...register("surname", {
+                required: true,})}
+           
           />
           
         </label>
@@ -46,11 +70,18 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            name="password"
             id="password"
             type="password"
+            name="password"
+              placeholder="password"
+              defaultValue={""}
+              {...register("password", {
+                required: true,
+                pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+              })}
+            />
             
-          />
+          
           
         </label>
         <label className="c-register__label" htmlFor="date">
@@ -61,12 +92,15 @@ export function RegisterComponent() {
             name="date"
             id="date"
             type="date"
-           
+            {...register("date", {
+                required: true,
+              })}
           />
           
         </label>
-        <button className="b-btn c-register__btn">Resgistrarse</button>
+        <button className="b-btn c-register__btn" >Registrarse</button>
       </form>
+     
     </div>
   );
 }
