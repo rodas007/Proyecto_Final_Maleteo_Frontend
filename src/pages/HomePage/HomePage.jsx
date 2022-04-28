@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Calendar } from 'primereact/calendar'
 import '../../assets/images/icons8Calendar100Copy@3x.jpg'
 import './Homepage.scss'
@@ -7,6 +7,8 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Pagination} from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+import { Rating } from 'primereact/rating';
 
 import travel1 from '../../assets/images/travel1.jpg'
 import buscar from '../../assets/images/buscar@3x.png'
@@ -17,10 +19,15 @@ const HomePage = ()=> {
   const moment = new Date()
 
     
-   
+const RatingDemo = () => {
+  const [val1, setVal1] = useState(null);
+  const [val2, setVal2] = useState(null);
+}
 
   return (
+
     <section className="b-visualizacion">
+
       <h1 className="titulo1">Encuentra tu guardíán</h1>
       <div className="Buscador-de-pega">
         <img className="lupa" src={buscar} alt="buscar"></img>
@@ -101,15 +108,15 @@ const HomePage = ()=> {
 
       <SwiperSlide><img className='fotoslider'
                 src="https://www.lavanguardia.com/files/content_image_mobile_filter/files/fp/uploads/2019/09/30/5fa52ff369941.r_d.328-221.jpeg"
-                alt="photo2"></img></SwiperSlide>
+                alt="photosevilla"></img></SwiperSlide>
                 
       <SwiperSlide><img className='fotoslider'
                 src="https://www.spain.info/export/sites/segtur/.content/imagenes/cabeceras-grandes/andalucia/alhambra-granada-20044065-istock.jpg_1014274486.jpg"
-                alt="photo3"></img></SwiperSlide>
+                alt="photogranada"></img></SwiperSlide>
                            
       <SwiperSlide><img className='fotoslider'
                 src="https://photo980x880.mnstatic.com/37f93c7924cb320de906a1f1b9f4e12a/la-gran-via-de-madrid-1072541.jpg"
-                alt="photo4"></img></SwiperSlide>
+                alt="photomadrid"></img></SwiperSlide>
       
     </Swiper>
           
@@ -126,9 +133,13 @@ const HomePage = ()=> {
           <h3>Un pedacito de Italia en Gijón</h3>
           <p>
             Sin lugar a duda es uno de los destinos Gastronómicos por excelencia
-            de esta gran ciudad situada en el norte de España. 4.96
-            ⭐⭐⭐⭐⭐(120)
+            de esta gran ciudad situada en el norte de España. 
+            <Rating value={4} readOnly stars={5} cancel={false} />
           </p>
+        
+                
+         
+
           <img
             src="https://c.stocksy.com/a/fQ9000/z9/36249.jpg"
             alt="image"
@@ -138,7 +149,8 @@ const HomePage = ()=> {
           <p>
             Si estás dispuesto a aventurarte en el mundo del submarinismo y
             venir a sentir una vivencia insólita en L'Aquárium. 4.96
-            ⭐⭐⭐⭐(120)
+            <Rating value={5} readOnly stars={5} cancel={false} />
+
           </p>
           <button className="b-button">Mostrar más</button>
         </div>
@@ -146,4 +158,5 @@ const HomePage = ()=> {
     </section>
   )
 }
+
 export default HomePage ;
