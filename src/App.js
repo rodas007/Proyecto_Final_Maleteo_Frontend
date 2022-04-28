@@ -11,14 +11,15 @@ import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import ReserveCompletePage from "./pages/ReserveCompletePage/ReserveCompletePage";
 import { JwtContext } from './context/JwtContext';
 import RequireAuth from './components/RequireAuth/RequireAuth';
-
+import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 
 
 
 function App() {
 
   const [jwt, setJwt] = useState(localStorage.getItem('token') || null);
-
+  
+  
 
 
 
@@ -26,21 +27,23 @@ function App() {
 
 <JwtContext.Provider value={{ jwt, setJwt }}>
 
-
     <Router>
       <div className="">
         <Routes>
           <Route path="/" element={<LogoPage />} />
-          <Route path="/home" element={<RequireAuth><HomePage/></RequireAuth>} />
+          <Route path="/home" element={<HomePage/>} />
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/getstarted" element={<GetStartedPage />} />
           <Route path="/prices" element={<PricesPage />} />
+          <Route path="/detalleespacio" element={<DetalleEspacio/>} />
+
+          
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/complete" element={<RequireAuth><ReserveCompletePage /></RequireAuth>} />
           <Route path="/*" element={<Navigate to="/login"/>}/>
         </Routes>
-      </div> to
+      </div> 
     </Router>
 </JwtContext.Provider>
 
