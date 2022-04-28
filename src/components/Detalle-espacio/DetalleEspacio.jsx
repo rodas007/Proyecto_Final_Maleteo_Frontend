@@ -20,6 +20,7 @@ const DetalleEspacio = () =>{
         {label: 'Habitación', value: 'Habitación'},
         {label: 'Trastero', value: 'Trastero'},
         {label: 'Buhardilla', value: 'Buhardilla'},
+        {label: 'Hall', value: 'Hall'},
         {label: 'Garaje', value: 'Garaje'}, ];
     
 
