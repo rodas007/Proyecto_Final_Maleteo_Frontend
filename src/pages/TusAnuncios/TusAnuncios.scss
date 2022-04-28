@@ -1,0 +1,28 @@
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: column;
+}
+
+.primeraFoto {
+  max-width: 100%;
+}
+
+.btn-espacio {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-color:transparent;
+  width: bold;
+  margin-left: 20px;
+
+  
+  color: #000000;
+  text-decoration: none;
+  font-size: large;
+  width: 200px;
+  height: 50px;
+  outline: none;
+  display: inline-block;
+}

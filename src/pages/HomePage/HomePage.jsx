@@ -13,7 +13,7 @@ import buscar from '../../assets/images/buscar@3x.png'
 import calendario from '../../assets/images/icons8Calendar100Copy@3x.jpg'
 import maletita from '../../assets/images/maletita@3x.jpg'
 
-export default function HomePage() {
+const HomePage = ()=> {
   const moment = new Date()
 
     
@@ -146,3 +146,4 @@ export default function HomePage() {
     </section>
   )
 }
+export default HomePage ;

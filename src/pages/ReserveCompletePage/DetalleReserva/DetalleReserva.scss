@@ -1,0 +1,45 @@
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.b-tarifas{
+  
+    display: flex;
+    flex-direction: column;
+    width: bold;
+    
+
+    
+    
+    &_text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      
+      
+        
+    }
+    &_price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 60px;
+
+    }
+     &_price2{
+         display: flex;
+         justify-content: flex-end;
+         margin-left: 156px;
+
+     }
+     &_price12{
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 250px;
+
+    }
+}
