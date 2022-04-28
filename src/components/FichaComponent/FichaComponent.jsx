@@ -140,8 +140,8 @@ const FichaComponent = () => {
           </div>
           <div className="reseñas-cont2">
             <div className="reseñas-cont2-text">
-              <p className="reseñas-cont2-text-l">Maria </p>{" "}
-              <p className="reseñas-cont2-text-s"> En Julio de 2019</p>
+              <p className="reseñas-cont2-text-l">Maria   </p>{" "}
+              <p className="reseñas-cont2-text-s">  En Julio de 2019</p>
             </div>
             <div>
               <p>
@@ -161,8 +161,8 @@ const FichaComponent = () => {
           </div>
           <div className="reseñas-cont2">
             <div className="reseñas-cont2-text">
-              <p className="reseñas-cont2-text-l">Robert </p>{" "}
-              <p className="reseñas-cont2-text-s"> En Julio de 2019</p>
+              <p className="reseñas-cont2-text-l">Robert   </p>{" "}
+              <p className="reseñas-cont2-text-s">   En Julio de 2019</p>
             </div>
             <div>
               <p>
@@ -182,8 +182,8 @@ const FichaComponent = () => {
           </div>
           <div className="reseñas-cont2">
             <div className="reseñas-cont2-text">
-              <p className="reseñas-cont2-text-l">Carla </p>{" "}
-              <p className="reseñas-cont2-text-s"> En Junio de 2019</p>
+              <p className="reseñas-cont2-text-l">Carla   </p>{" "}
+              <p className="reseñas-cont2-text-s">   En Junio de 2019</p>
             </div>
             <div>
               <p>
