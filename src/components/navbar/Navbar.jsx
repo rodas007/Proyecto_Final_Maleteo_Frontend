@@ -7,6 +7,7 @@ import message from '../../assets/images/mensaje@3x.png';
 import user from '../../assets/images/usuario@3x.png';
 
 
+
 const Navbar = () => {
   return (
     <nav className="nav">
