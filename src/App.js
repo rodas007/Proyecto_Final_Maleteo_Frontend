@@ -10,6 +10,7 @@ import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import ReserveCompletePage from "./pages/ReserveCompletePage/ReserveCompletePage";
 import FichaComponent from "./components/FichaComponent/FichaComponent";
 import DetalleReservaComponent from "./components/DetalleReservaComponent/DetalleReservaComponent";
+import PeticionDeReservaComponent from "./components/PeticionDeReservaComponent/PeticionDeReservaComponent";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/complete" element={<ReserveCompletePage />} />
           <Route path="/ficha" element={<FichaComponent />} />
-          <Route path="/DetalleReserva" element={<DetalleReservaComponent />} />
+          <Route path="/detallereserva" element={<DetalleReservaComponent />} />
+          <Route path="/peticiondereserva" element={<PeticionDeReservaComponent />} />
         </Routes>
       </div>
     </Router>
