@@ -4,9 +4,21 @@
   align-items: center;
   justify-content: column;
 }
+.Fotoprincipal{
+  width: 100%;
+  border-bottom: solid rgb(63, 61, 61) 1px;
+  
+
+}
 
 .primeraFoto {
-  max-width: 100%;
+  max-width: 80%;
+  height: 40%;
+  margin-bottom: 15px;
+  margin-top: 12px;
+  margin-left: 30px;
+  border-radius: 8px;
+
 }
 
 .btn-espacio {
@@ -14,15 +26,34 @@
   align-items: center;
   background-color: transparent;
   border-color:transparent;
-  width: bold;
+  font-weight: bold;
   margin-left: 20px;
-
-  
-  color: #000000;
+  color:#414040;
   text-decoration: none;
   font-size: large;
   width: 200px;
   height: 50px;
   outline: none;
   display: inline-block;
+}
+.b-cabecera{
+  margin-top: 70px;
+  margin-left: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.completo{
+  color: grey;
+}
+.tusanuncios{
+  font-weight: bold;
+  font-size: xx-large;
+ 
+
+}
+
+.hall{
+  
+  font-size: x-large;
+  color:#414040;
 }

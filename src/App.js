@@ -14,7 +14,7 @@ import RequireAuth from './components/RequireAuth/RequireAuth';
 import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 import DetalleReserva from "./pages/ReserveCompletePage/DetalleReserva/DetalleReserva";
 import TusAnuncios from "./pages/TusAnuncios/TusAnuncios";
-
+import ConfigEspacio from "./pages/ConfigEspacio/ConfigEspacio";
 
 
 function App() {
@@ -40,6 +40,7 @@ function App() {
           <Route path="/detalleespacio" element={<DetalleEspacio/>} />
           <Route path="/detallereserva" element ={<DetalleReserva/>}/>
           <Route path="/tusanuncios" element={<TusAnuncios/>} />
+          <Route path="/configespacio" element={<ConfigEspacio/>}/>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/complete" element={<RequireAuth><ReserveCompletePage /></RequireAuth>} />
