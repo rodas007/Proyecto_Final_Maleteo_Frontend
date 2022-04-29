@@ -1,0 +1,104 @@
+.b-Cabecera{
+    width: 90%;
+}
+
+.detalle{
+    display: flex;
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 45px;
+
+}
+
+.b-row1{
+
+    display: flex;
+    
+    align-items: flex-start;
+    justify-content: space-evenly;
+    list-style: none;
+    font-weight: bold;
+    color: #010101;
+    
+}
+ul{
+    display: flex;
+    
+    align-items: flex-start;
+    justify-content: space-evenly;
+    list-style: none;
+    
+    
+    
+}
+
+.lista-opcion{
+    border-bottom: rgb(84, 81, 81) 1px;
+    border-bottom-style:ridge;
+    width: 100%;
+    color:rgb(20, 20, 20) ;
+    
+    
+    
+}
+.b-tarifas{
+    
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 25px;
+   
+    
+
+    
+    
+    &_text{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        color: grey;
+       
+      
+      
+        
+    }
+    &_price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: 60px;
+        color:rgb(72, 71, 71) ;
+
+    }
+     &_price2{
+         display: flex;
+         justify-content: flex-end;
+         margin-left: 170px;
+         color:rgb(72, 71, 71) ;
+
+     }
+     &_price12{
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 250px;
+        color:rgb(72, 71, 71) ;
+
+    }
+    .btn-reserva{
+        margin-top: 30%;
+        margin-left: 10%;
+        display: flex;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 50px;
+        background-color: #F68F24;
+        color:white;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+}

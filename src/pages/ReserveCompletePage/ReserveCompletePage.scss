@@ -1,10 +1,28 @@
 .complete{
+  width: 100%;
+ 
 
   &__fenix {
+    width: 100%;
     display: flex;
-    width: 120px;
-    margin: 80px 125px;
-   
-  }
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
 
+    &-im{
+     
+      max-width: 60%;
+    }
+    }
+&__text{
+      font-weight: 600;
+      font-size: large;
+
+    }
+}
+.b-title{
+  margin-top: 6vh;
+  text-align: start;
+  font-weight: 500;
+  font-size: xx-large;
 }

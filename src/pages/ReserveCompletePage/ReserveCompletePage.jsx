@@ -15,13 +15,14 @@ export default function ReserveCompletePage() {
   return (
 
     <div className=" p-4 complete">
-    <SliderHome></SliderHome>
       <p className="b-title">Reserva Completada</p>
-      <img src={fenix} alt="fenix" className="complete__fenix"/>
-      <p>Codigo de reserva: </p>
+      <div className="complete__fenix">
+      <img src={fenix} alt="fenix" className="complete__fenix-im"/>
+      </div>
+      
       <h3>BE FREE!</h3>
-      <p>Contacta ya con tu guardian y espera a que acepte tu reserva</p>
-      <p>Guardian email: </p>
+      <p className='complete__text'>Contacta ya con tu guardian y espera a que acepte tu reserva</p>
+      
     </div>
   );
 }
