@@ -4,9 +4,10 @@ import "./DetalleReserva.scss"
 const DetalleReserva = () =>{
     return(
         <section className="b-Cabecera">
-        <h1> Detalles de tu reserva</h1>
+           <div className="b-box1">
+        <h1 className="detalle"> Detalles de tu reserva</h1>
         <div className="lista-opcion">
-            <ul>
+            <ul className="b-row1">
                 <li><h5>LLegada</h5></li>
                 <li><h5>Recogida</h5></li>
                 <li><h5>Equipaje</h5></li>
@@ -16,7 +17,7 @@ const DetalleReserva = () =>{
                 <li><p>30 de Julio</p></li>
                 <li><p>2 Equipajes</p></li>
             </ul>
-        </div>
+        </div> </div>
 
         <div className="b-tarifas">
 
@@ -32,7 +33,12 @@ const DetalleReserva = () =>{
          <div className="b-tarifas_text"><p>Total</p>
          <b><p className="b-tarifas_price12"> 12€ </p></b></div>
 
+
+
+         <button className="btn-reserva">Reservar</button>
+
         </div>
+         
         
         
         
