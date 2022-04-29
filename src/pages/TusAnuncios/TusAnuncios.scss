@@ -1,3 +1,5 @@
+
+
 .cabecera {
   display: flex;
   flex-direction: column;
@@ -6,35 +8,55 @@
 }
 .Fotoprincipal{
   width: 100%;
-  border-bottom: solid rgb(63, 61, 61) 1px;
+  border-bottom: solid rgb(186, 181, 181) 1px;
   
 
 }
 
 .primeraFoto {
-  max-width: 80%;
+  max-width: 65%;
   height: 40%;
   margin-bottom: 15px;
   margin-top: 12px;
   margin-left: 30px;
   border-radius: 8px;
+ 
 
 }
 
-.btn-espacio {
+.b-espacio {
   display: flex;
   align-items: center;
   background-color: transparent;
   border-color:transparent;
   font-weight: bold;
   margin-left: 20px;
-  color:#414040;
+  margin-top: 20px;
+  color:#4a4a4a;
   text-decoration: none;
   font-size: large;
   width: 200px;
   height: 50px;
   outline: none;
   display: inline-block;
+ 
+}
+.btn-go{
+  border:0px;
+  border-color: transparent;
+  background-color: transparent;
+ align-items: right;
+
+}
+
+.btn-mas{
+  border:0px;
+  border-color: transparent;
+  background-color: transparent;
+  align-items: right;
+  margin-left: 70%;
+  margin-bottom: 50%;
+
 }
 .b-cabecera{
   margin-top: 70px;
