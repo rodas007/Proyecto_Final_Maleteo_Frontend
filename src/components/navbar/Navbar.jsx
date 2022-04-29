@@ -10,20 +10,20 @@ import user from '../../assets/images/usuario@3x.png';
 const Navbar = () => {
   return (
     <nav className="nav">
-      <ul>
+      
         <Link to="/" className="nav_home">
-          <img src={home} alt="Home" />
+          <img className="nav_img" src={home} alt="Home" />
         </Link>
         <Link to="/" className="nav_search">
-          <img src={search} alt="Search" />
+          <img className="nav_img" src={search} alt="Search" />
         </Link>
         <Link to="/" className="nav_message">
-          <img src={message} alt="Message" />
+          <img className="nav_img" src={message} alt="Message" />
         </Link>
         <Link to="/" className="nav_user">
-          <img src={user} alt="User" />
+          <img className="nav_img" src={user} alt="User" />
         </Link>
-      </ul>
+      
     </nav>
   );
 };

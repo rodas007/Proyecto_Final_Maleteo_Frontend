@@ -1,0 +1,22 @@
+.c-news{
+  margin: 6px;
+  padding: 6px;
+  .swiper-slide .swiper-slide-active {
+    
+      width: 312px;
+      margin-right: 50px;
+  
+  }
+
+  &__item{
+
+    margin: 0px;
+  }
+  &__item-img{
+    height: 25vh;
+    width: 40vh;
+    
+  
+  }
+  
+}

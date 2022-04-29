@@ -1,0 +1,45 @@
+.contenedor-espacio{
+    width: 90%;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+   
+   
+}
+.b-describe{
+    font-weight: bold;
+    margin-bottom: 9vh;
+    align-items: flex-start;
+}
+.b-tipoespacio{
+    margin-right: 70px;
+    margin-top: 14px;
+    font-weight: bold;
+    color: rgb(69, 71, 71);
+}
+.b-especifica{
+    margin-right: 70px;
+    font-weight: bold;
+    color: rgb(69, 71, 71);
+}
+
+.p-dropdown{
+   width: 300px;
+    border: 0px;
+    border-bottom: 1px solid rgb(101, 98, 98) ;
+    font-weight: bold;
+   
+}
+
+.btn-flecha{
+    margin-top: 70%;
+    margin-left: 80%;
+    
+    border:none;
+    background-color: transparent;
+    
+}

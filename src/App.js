@@ -11,6 +11,13 @@ import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import ReserveCompletePage from "./pages/ReserveCompletePage/ReserveCompletePage";
 import { JwtContext } from './context/JwtContext';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import DetalleReservaComponent from "./components/DetalleReservaComponent/DetalleReservaComponent";
+import FichaComponent from "./components/FichaComponent/FichaComponent";
+import PeticionDeReservaComponent from "./components/PeticionDeReservaComponent/PeticionDeReservaComponent";
+import ConfirmacionDeReservaComponent from "./components/ConfirmacionDeReservaComponent/ConfirmacionDeReservaComponent";
+import TusAnuncios from "./pages/TusAnuncios/TusAnuncios";
+import HacerseGuardian from "./pages/HacerseGuardian/HacerseGuardian";
+import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 
 
 
@@ -31,16 +38,26 @@ function App() {
       <div className="">
         <Routes>
           <Route path="/" element={<LogoPage />} />
-          <Route path="/home" element={<RequireAuth><HomePage/></RequireAuth>} />
+          <Route path="/home" element={<HomePage/>} />
           <Route path="/welcome" element={<WelcomePage />} />
           <Route path="/getstarted" element={<GetStartedPage />} />
           <Route path="/prices" element={<PricesPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/complete" element={<RequireAuth><ReserveCompletePage /></RequireAuth>} />
+          <Route path="/complete" element={<ReserveCompletePage />} />
+          <Route path="/ficha" element={<FichaComponent />} />
+          <Route path="/detallereserva" element={<DetalleReservaComponent />} />
+          <Route path="/peticiondereserva" element={<PeticionDeReservaComponent />} />
+          <Route path="/confirmaciondereserva" element={<ConfirmacionDeReservaComponent />} />
+          <Route path="/tusanuncios" element={<TusAnuncios/>} />
+          <Route path="/hacerseguardian" element={<HacerseGuardian/>}/>
+          <Route path="/detalleespacio" element={<DetalleEspacio/>} />
           <Route path="/*" element={<Navigate to="/login"/>}/>
+          
+          
+
         </Routes>
-      </div> to
+      </div> 
     </Router>
 </JwtContext.Provider>
 

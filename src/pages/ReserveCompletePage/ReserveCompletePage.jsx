@@ -1,6 +1,7 @@
 import React from 'react'
 import './ReserveCompletePage.scss';
 import fenix from '../../assets/images/fenix@3x.png';
+import SliderHome from '../../components/SliderHome/SliderHome';
 
 
 
@@ -12,7 +13,9 @@ export default function ReserveCompletePage() {
 
   
   return (
+
     <div className=" p-4 complete">
+    <SliderHome></SliderHome>
       <p className="b-title">Reserva Completada</p>
       <img src={fenix} alt="fenix" className="complete__fenix"/>
       <p>Codigo de reserva: </p>

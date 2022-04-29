@@ -1,18 +1,21 @@
 
 .nav{
-    position: fixed;
-    bottom: 0;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0px; 
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
+    background-color:#fff;
+    height: 7vh;
+    border-top: 2px solid #e5e5e5;
 
-    ul{
-        margin:0;
-        padding:0;
-        display:flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: space-around;
-        
-    }
+
+   &_img{
+width: 28px;
+height: 28px;
+
+
+   }
 
 }
