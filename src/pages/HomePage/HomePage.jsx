@@ -10,10 +10,13 @@ import { ExperienceComponent } from "../../components/ExprienceComponent/Experie
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import SliderHome from "../../components/SliderHome/SliderHome";
 
+
+
 export default function HomePage() {
   const [experiences, setExperiences] = useState();
   const [novedades, setNovedades] = useState();
-
+  const [expLimit, setExpLimit] = useState(1);
+  
   useEffect(() => {
     const getNews = async () => {
       const res = await axios.get(`${environment.url}novedades`);
@@ -24,8 +27,8 @@ export default function HomePage() {
     getNews();
   }, []);
 
-  useEffect((limit = 2) => {
-    const getExp = async () => {
+
+    const getExp = async (limit = 2) => {
       const res = await axios.get(
         `${environment.url}experiencias?limit=${limit}`
       );
@@ -33,8 +36,16 @@ export default function HomePage() {
       console.log(res.data);
     };
 
+
+    useEffect(() => {
     getExp();
   }, []);
+
+
+  const changePage = (newPage) => {
+    setExpLimit(newPage);
+    getExp(newPage +1);
+  }
 
   return (
     <div className="home">
@@ -72,7 +83,7 @@ export default function HomePage() {
        <SliderHome novedades={novedades} />
       {/* <NewsComponent novedades={novedades} /> */}
       <ExperienceComponent experiences={experiences} />
-      <button className="b-btn home__button">Mostrar más</button>
+      <button className="b-btn home__button"onClick={() => changePage(expLimit + 2)}  >Mostrar más</button>
       <NavComponent />
     </div>
   );
