@@ -1,36 +1,39 @@
 import React from "react";
 import "./HacerseGuardian.scss";
 import { useState } from "react";
+import iconoX from "../../assets/images/iconoX.png";
 
 const HacerseGuardian = () =>{
 
-    const [name, setName] = useState("");
-    const [selectedFile, setSelectedFile] = useState(null);
+
 
     return(
-        <div className="b-global">
+        <>
 
          <div className="b-encabezado">
-            <h1>Configura tu espacio en muy pocos pasos</h1></div>
+         
+           <div className="texto">
+            <p>Configura tu espacio en muy pocos pasos</p></div>
+            <button className="iconox"><img src={iconoX}/></button>
+           
+            </div>
+            <div className="b-global">
 
          <div className="b-describe">
-             <h1>Describe tu espacio <button className="btn-continuar">Continuar</button></h1>
-         </div>   
+             <p className="text-describe">Describe tu espacio <button className="btn-continuar">Continuar</button></p>
+         
             
       <form>
           <h6 className="Ubi">Ubicación</h6>
           <input type="text" />
 
           <h6 className="fotos">Fotos</h6>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}/>
-           <input
-          type="file"
-          value={selectedFile}
-          onChange={(e) => setSelectedFile(e.target.files[0])}
-        />
+          <div className="mb-3">
+     
+      <input className="form-control" type="file" id="formFile"></input>
+        
+    </div>
+
 
         <h6 className="titulo">Titulo</h6>
         <input type="text" name="titulo" id="title" />
@@ -44,8 +47,8 @@ const HacerseGuardian = () =>{
 
 
       
-      </form>
-    </div>
+      </form> </div>  
+    </div></>
 
        
     )
