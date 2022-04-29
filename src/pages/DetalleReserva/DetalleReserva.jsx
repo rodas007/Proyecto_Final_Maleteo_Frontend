@@ -3,11 +3,11 @@ import "./DetalleReserva.scss"
 
 const DetalleReserva = () =>{
     return(
-        <section className="b-Cabecera">
-           <div className="b-box1">
+        <section className="b-Cabecera2">
+           <div className="b-box12">
         <h1 className="detalle"> Detalles de tu reserva</h1>
         <div className="lista-opcion">
-            <ul className="b-row1">
+            <ul className="b-row12">
                 <li><h5>LLegada</h5></li>
                 <li><h5>Recogida</h5></li>
                 <li><h5>Equipaje</h5></li>
@@ -35,7 +35,7 @@ const DetalleReserva = () =>{
 
 
 
-         <button className="btn-reserva">Reservar</button>
+         <button className="btwwn-reserva">Reservar</button>
 
         </div>
          
