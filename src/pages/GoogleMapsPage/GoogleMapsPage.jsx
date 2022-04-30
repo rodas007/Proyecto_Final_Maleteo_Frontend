@@ -15,8 +15,7 @@ const center = {
 function GoogleMapsPage() {
   return (
     <LoadScript
-      googleMapsApiKey="AIzaSyA9La6urNL90Qtiawx04VX-2A4WzK0uxgA"
-    >
+      googleMapsApiKey= {process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
       <GoogleMap
        id="searchbox-example"
         mapContainerStyle={containerStyle}

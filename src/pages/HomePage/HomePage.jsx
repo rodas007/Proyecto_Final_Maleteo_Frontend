@@ -61,7 +61,7 @@ export default function HomePage() {
             <Link to="#">
               <img src={calendario} className="img" alt="/" />
             </Link>
-            <input placeholder="Deposito" className="retirada" />
+            <Calendar className="retirada" minDate = {moment} dateFormat="dd/mm/yy" value={dateDeposit}  placeholder="Deposito"  />
           </div>
           <div className="c-prueba2">
             <Link to="#">
