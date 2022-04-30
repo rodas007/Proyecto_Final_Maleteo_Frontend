@@ -19,7 +19,9 @@ export default function HomePage() {
   const [novedades, setNovedades] = useState();
   const [expLimit, setExpLimit] = useState(1);
   const moment = new Date();
-  const [dateDeposit, setDateDeposit] = useState(new Date());
+  
+  const [dateDeposit, setDateDeposit] = useState();
+  const [dateCollect, setDateCollect] = useState();
 
   useEffect(() => {
     const getNews = async () => {
@@ -67,7 +69,7 @@ export default function HomePage() {
             <Link to="#">
               <img src={calendario} className="img" alt="/" />
             </Link>
-            <input placeholder="Retirada" className="retirada" />
+            <Calendar className="retirada" minDate = {dateDeposit} dateFormat="dd/mm/yy" value={dateCollect} placeholder="Retirada"  />
           </div>
         </div>
         <div className="c-form2">
@@ -75,7 +77,12 @@ export default function HomePage() {
             <Link to="#">
               <img src={maleta} className="img2" alt="/" />
             </Link>
-            <input placeholder="Nº de piezas" value="" className="retirada" />
+            <select placeholder="Nº de piezas" value="" className="retirada">
+            
+            
+            
+            
+            </select>
           </div>
           <div className="c-prueba3">
             <Link to="#">
