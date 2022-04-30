@@ -10,6 +10,7 @@ import { ExperienceComponent } from "../../components/ExprienceComponent/Experie
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import SliderHome from "../../components/SliderHome/SliderHome";
 import { InputComponent } from "../../components/InputComponent/InputComponent";
+import { Calendar } from 'primereact/calendar';
 
 
 
@@ -17,7 +18,9 @@ export default function HomePage() {
   const [experiences, setExperiences] = useState();
   const [novedades, setNovedades] = useState();
   const [expLimit, setExpLimit] = useState(1);
-  
+  const moment = new Date();
+  const [dateDeposit, setDateDeposit] = useState(new Date());
+
   useEffect(() => {
     const getNews = async () => {
       const res = await axios.get(`${environment.url}novedades`);
