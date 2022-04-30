@@ -22,6 +22,11 @@ export default function HomePage() {
   
   const [dateDeposit, setDateDeposit] = useState();
   const [dateCollect, setDateCollect] = useState();
+  const [numBaggage, SetNumBaggage] = useState();
+  
+  var numberOfBaggage =0;
+  console.log("DESPOSITO",dateDeposit);
+  console.log("RECOGIDA",dateCollect);
 
   useEffect(() => {
     const getNews = async () => {
@@ -63,13 +68,13 @@ export default function HomePage() {
             <Link to="#">
               <img src={calendario} className="img" alt="/" />
             </Link>
-            <Calendar className="retirada" minDate = {moment} dateFormat="dd/mm/yy" value={dateDeposit}  placeholder="Deposito"  />
+            <Calendar className="retirada"  minDate = {moment} dateFormat="dd/mm/yy"  value={dateDeposit} onChange={(e) => setDateDeposit(e.value)}  placeholder="Deposito"  />
           </div>
           <div className="c-prueba2">
             <Link to="#">
               <img src={calendario} className="img" alt="/" />
             </Link>
-            <Calendar className="retirada" minDate = {dateDeposit} dateFormat="dd/mm/yy" value={dateCollect} placeholder="Retirada"  />
+            <Calendar className="retirada" minDate = {dateDeposit} dateFormat="dd/mm/yy"   value={dateCollect} placeholder="Retirada" onChange={(e) => setDateCollect(e.value)}  />
           </div>
         </div>
         <div className="c-form2">
@@ -77,9 +82,9 @@ export default function HomePage() {
             <Link to="#">
               <img src={maleta} className="img2" alt="/" />
             </Link>
-            <select placeholder="Nº de piezas" value="" className="retirada">
+            <select className="retirada" placeholder="Nº de piezas"   id="numberBaggage">
             
-            <option value="1">1</option>
+                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
