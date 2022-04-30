@@ -25,6 +25,7 @@ import TusAnuncios from "./pages/TusAnuncios/TusAnuncios";
 import HacerseGuardian from "./pages/HacerseGuardian/HacerseGuardian";
 import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 import DetalleReserva from "./pages/DetalleReserva/DetalleReserva";
+import ConfiguracionUsuario from "./pages/ConfiguracionUsuario/ConfiguracionUsuario";
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token") || null);
@@ -43,6 +44,7 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/complete" element={<ReserveCompletePage />} />
             <Route path="/ficha" element={<FichaComponent />} />
+            <Route path="/configuracionUsuario" element={<ConfiguracionUsuario/>}/>
             <Route
               path="/detallereserva"
               element={<DetalleReservaComponent />}
