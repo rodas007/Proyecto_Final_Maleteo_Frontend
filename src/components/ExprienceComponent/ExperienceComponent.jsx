@@ -7,7 +7,7 @@ export function ExperienceComponent({experiences}) {
 
     return (
         <div className="c-experience">
-            <p className="title-primary b-title">Experiencias</p>
+            <p className="c-title-primary">Experiencias</p>
             <div className="c-experience__container">
                 {
                     experiences?.map( (experiences, key) =>

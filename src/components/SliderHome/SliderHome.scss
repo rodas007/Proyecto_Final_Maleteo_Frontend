@@ -1,3 +1,13 @@
+.c-slider{
+&__text{
+
+  padding-top: 120px;
+  padding-left: 13.5px;
+}
+  
+}
+
+
 .c-news{
   margin: 6px;
   padding: 6px;
@@ -13,8 +23,8 @@
     margin: 0px;
   }
   &__item-img{
-    height: 25vh;
-    width: 40vh;
+    height: 24vh;
+    width: 46vh;
     
   
   }

@@ -8,6 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@primer/react": "^35.2.0",
+    "@react-google-maps/api": "^2.10.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -24,6 +25,7 @@
     "sass": "^1.50.1",
     "styled-components": "^5.3.5",
     "swiper": "^8.1.4",
+    "use-places-autocomplete": "^2.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

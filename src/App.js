@@ -25,6 +25,7 @@ import TusAnuncios from "./pages/TusAnuncios/TusAnuncios";
 import HacerseGuardian from "./pages/HacerseGuardian/HacerseGuardian";
 import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 import DetalleReserva from "./pages/DetalleReserva/DetalleReserva";
+import GoogleMapsPage from "./pages/GoogleMapsPage/GoogleMapsPage";
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token") || null);
@@ -59,6 +60,7 @@ function App() {
             <Route path="/hacerseguardian" element={<HacerseGuardian />} />
             <Route path="/detalleespacio" element={<DetalleEspacio />} />
             <Route path="/detallereservausuario" element={<DetalleReserva />} />
+            <Route path="/maps" element={<GoogleMapsPage />} />
             <Route path="/*" element={<Navigate to="/login" />} />
           </Routes>
         </div>

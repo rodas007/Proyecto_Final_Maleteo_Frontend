@@ -1,0 +1,91 @@
+.container{
+  
+  width:92vw;
+  height: 40pt;
+  text-align: center;
+  padding-right : 13.5px;
+  padding-left : 13.5px;
+  padding-top: 5px;
+  margin-left: 13.5px;
+  padding-bottom: 2px;
+  border-radius: 3pt;
+  border: none;
+  background-color: rgb(251,251,251);
+}
+
+.where{
+  
+  width: 87%;
+  text-align: center;
+  height: 29pt;
+  background-color: rgb(251,251,251);
+  border-radius: 3pt;
+  border: none;
+}
+.c-form{
+  text-align: center;
+  align-content: center;
+}
+.retirada{
+  width: 55%;
+  background-color: rgb(251,251,251);
+  border-radius: 3pt;
+  border: none;
+  text-align: center;
+  margin-top: 10pt;
+  margin-top: 9pt;
+}
+.c-form2{
+  text-align: center;
+}
+
+.img{
+  
+  width: 12pt;
+  height: 16pt;
+  margin-right: 10pt;
+}
+.img2{
+  width: 18pt;
+  height: 24pt;
+  margin-right: 10pt;
+}
+.img3{
+  width: 16pt;
+  height: 16pt;
+  margin-right: 10pt;
+}
+.c-prueba{
+  align-content: center;
+  margin: 7.5pt;
+  margin-left: 13.5px;
+  height: 40pt;
+  width: 44vw;
+  background-color: rgb(251,251,251);
+  border-radius: 3pt;
+  border: none;
+  float: left;
+}
+.c-prueba2{
+  align-content: center;
+  margin: 7.5pt;
+  height: 40pt;
+  width: 40vw;
+  background-color: rgb(251,251,251);
+  border-radius: 3pt;
+  border: none;
+  float: left;
+}
+.c-prueba3{
+  align-content: center;
+  margin: 7.5pt;
+  height: 29pt;
+  width: 40vw;
+  border-radius: 3pt;
+  border: none;
+  float: left;
+}
+.suggestion-box{
+  position: relative;
+  z-index: 2;
+}

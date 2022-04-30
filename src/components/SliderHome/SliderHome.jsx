@@ -16,8 +16,8 @@ const SliderHome = ({novedades}) => {
 
 
   return (
-    <>
-    <h1>Novedades</h1>
+    <div className="c-slider">
+    <h1 className="c-slider__text">Novedades</h1>
       <div className="c-news swiper">
         <Swiper
           modules={[Pagination]}
@@ -41,7 +41,7 @@ const SliderHome = ({novedades}) => {
           )}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 

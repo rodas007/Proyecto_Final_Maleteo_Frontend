@@ -9,6 +9,7 @@ import { NewsComponent } from "../../components/NewsComponent/NewsComponent";
 import { ExperienceComponent } from "../../components/ExprienceComponent/ExperienceComponent";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import SliderHome from "../../components/SliderHome/SliderHome";
+import { InputComponent } from "../../components/InputComponent/InputComponent";
 
 
 
@@ -52,6 +53,7 @@ export default function HomePage() {
       <p className="b-title home__title">Encuentra tu guardian</p>
       <form>
         <div className="c-form">
+        <InputComponent />
           <div className="c-prueba">
             <Link to="#">
               <img src={calendario} className="img" alt="/" />
@@ -70,11 +72,11 @@ export default function HomePage() {
             <Link to="#">
               <img src={maleta} className="img2" alt="/" />
             </Link>
-            <input placeholder="Nº de piezas" value="#" className="retirada" />
+            <input placeholder="Nº de piezas" value="" className="retirada" />
           </div>
           <div className="c-prueba3">
             <Link to="#">
-              <button className="b-btn">Continuar</button>
+              <button className="b-btn">Buscar</button>
             </Link>
           </div>
         </div>

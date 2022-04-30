@@ -1,6 +1,6 @@
 .home{
   &__title{
-    margin: 40px 0 10px 20px;
+    margin: 35px 53px 10px 12.5px;
   }
   &__button{
     font-weight: bold;
@@ -48,4 +48,28 @@
   margin-top: 9pt;
 }
 
+.b-btn {
+  width: 40vw;
+  height: 40pt;
+  background-color: rgb(246, 143, 36);
+  color: white;
+  text-align: center;
+  border-radius: 3pt;
+  border: none;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%);
+}
 
+.home__button {
+  font-weight: bold;
+  padding: 0pt 53pt;
+  text-decoration: none;
+  font-size: 12pt;
+  margin: 0pt 60pt 40pt;
+  cursor: pointer;
+  border: 1px solid #F78712;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  color: #F78712;
+  width: 250px;
+  height: 40px;
+}
