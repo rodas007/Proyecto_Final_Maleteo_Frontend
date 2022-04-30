@@ -11,6 +11,7 @@ import { NavComponent } from "../../components/NavComponent/NavComponent";
 import SliderHome from "../../components/SliderHome/SliderHome";
 import { InputComponent } from "../../components/InputComponent/InputComponent";
 import { Calendar } from 'primereact/calendar';
+import { Dropdown } from 'primereact/dropdown';
 
 
 
@@ -22,11 +23,12 @@ export default function HomePage() {
   
   const [dateDeposit, setDateDeposit] = useState();
   const [dateCollect, setDateCollect] = useState();
-  const [numBaggage, SetNumBaggage] = useState();
+  const [numBaggage, SetNumBaggage] = useState([]);
   
-  var numberOfBaggage =0;
+  
   console.log("DESPOSITO",dateDeposit);
   console.log("RECOGIDA",dateCollect);
+  console.log("numero maletas",numBaggage);
 
   useEffect(() => {
     const getNews = async () => {
@@ -58,6 +60,11 @@ export default function HomePage() {
     getExp(newPage +1);
   }
 
+
+
+
+  
+
   return (
     <div className="home">
       <p className="b-title home__title">Encuentra tu guardian</p>
@@ -80,9 +87,9 @@ export default function HomePage() {
         <div className="c-form2">
           <div className="c-prueba">
             <Link to="#">
-              <img src={maleta} className="img2" alt="/" />
+              <img src={maleta} className="img2" alt="icon maleta" />
             </Link>
-            <select className="retirada" placeholder="Nº de piezas"   id="numberBaggage">
+            <select className="retirada" placeholder="Nº de piezas"   id="numberBaggage" value={numBaggage}  onClick={(e) => SetNumBaggage(e.value)}>
             
                     <option value="1">1</option>
                     <option value="2">2</option>
