@@ -1,13 +1,11 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+
+
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import Slide1 from "../../assets/images/slider.jpg";
-import Slide2 from "../../assets/images/slider1.jpeg";
-import Slide3 from "../../assets/images/slider2.jpg";
+
 
 
 import "./SliderHome.scss";
@@ -18,7 +16,7 @@ const SliderHome = ({novedades}) => {
   return (
     <div className="c-slider">
     <h1 className="c-slider__text">Novedades</h1>
-      <div className="c-news swiper">
+      <div className="c-news swiper" >
         <Swiper
           modules={[Pagination]}
           spaceBetween={50}
