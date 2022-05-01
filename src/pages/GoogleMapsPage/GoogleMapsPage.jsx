@@ -1,33 +1,39 @@
-import React from 'react'
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { useEffect, useMemo, useState } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 
 const containerStyle = {
-  width: '410px',
-  height: '500px'
+  width: '414px',
+  height: '736px'
 };
 
-const center = {
-  lat:40.4165000,
-  lng:-3.7025600
-};
 
-function GoogleMapsPage() {
-  return (
-    <LoadScript
-      googleMapsApiKey= {process.env.REACT_APP_GOOGLE_MAPS}>
-      <GoogleMap
-       id="searchbox-example"
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={15}
-      >
-      
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
+
+
+export default function GoogleMapsPage() {
+  
+  
+    const { isLoaded } = useLoadScript({
+      googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
+    });
+  
+    if (!isLoaded) return <div>Loading...</div>;
+    return <Map />;
+  }
+  
+  function Map() {
+    useEffect ( ( )  =>  setIsMounted ( true ) ,  [ ] ) ;
+    const  [ isMounted ,  setIsMounted ]  =  useState ( false ) ;
+    const center = useMemo(() => ({ lat: 40.4167, lng: -3.70325 }), []);
+  
+    return (
+      <GoogleMap zoom={15} center={center} mapContainerStyle={containerStyle}>
+       {isMounted && <Marker position={center} />}
+        
       </GoogleMap>
-    </LoadScript>
-  )
-}
-
-export default React.memo(GoogleMapsPage)
+    );
+  }
+        
+      
+      
+      

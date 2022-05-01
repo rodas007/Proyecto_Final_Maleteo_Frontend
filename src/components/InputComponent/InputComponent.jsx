@@ -71,6 +71,7 @@ export function InputComponent() {
       );
     });
   return (
+    
     <div>
     <div className="container">
 
