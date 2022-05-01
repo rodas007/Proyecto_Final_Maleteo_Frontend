@@ -5,6 +5,7 @@ import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
 } from "use-places-autocomplete";
+
 import useOnclickOutside from "react-cool-onclickoutside";
 
 
@@ -78,7 +79,7 @@ export function InputComponent() {
       <input  className="where" style={{ width: 300, maxWidth: "90%" }} value={value}
       onChange={handleInput}
       disabled={!ready} placeholder="¿Dónde te encuentras? Madrid,Barcelona..." />
-{status === "OK" && <ul>{renderSuggestions()}</ul>}
+{status === "OK" && <ul className="c-sugestions">{renderSuggestions()}</ul>}
       <div className="suggestion-box">
         <div className="suggestion-box"></div>
       

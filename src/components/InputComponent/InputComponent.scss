@@ -11,33 +11,38 @@
   border-radius: 3pt;
   border: none;
   background-color: rgb(251,251,251);
-  z-index: 999;
+  box-shadow: 0 0 2pt 0.5pt #f0efef;
 }
 
 .where{
-  
+  z-index: 990;
   width: 87%;
   text-align: center;
   height: 29pt;
   background-color: rgb(251,251,251);
   border-radius: 3pt;
   border: none;
+  
+
 }
 .c-form{
   text-align: center;
   align-content: center;
+  
 }
 .retirada{
-  width: 55%;
+  width: 70%;
   background-color: rgb(251,251,251);
   border-radius: 3pt;
   border: none;
   text-align: center;
   margin-top: 10pt;
   margin-top: 9pt;
+  
 }
 .c-form2{
   text-align: center;
+  
 }
 
 .img{
@@ -66,16 +71,19 @@
   border-radius: 3pt;
   border: none;
   float: left;
+  box-shadow: 0 0 2pt 0.5pt #f0efef;
 }
 .c-prueba2{
-  align-content: center;
-  margin: 7.5pt;
-  height: 40pt;
-  width: 40vw;
-  background-color: rgb(251,251,251);
-  border-radius: 3pt;
-  border: none;
-  float: left;
+margin-top: 7.5pt;
+margin-left: 4pt;
+width: 44vw;
+height: 40pt;
+background-color: rgb(251, 251, 251);
+border-radius: 3pt;
+border: none;
+float: left;
+box-shadow: 0 0 2pt 0.5pt #f0efef;
+
 }
 .c-prueba3{
   align-content: center;
@@ -85,8 +93,22 @@
   border-radius: 3pt;
   border: none;
   float: left;
+  box-shadow: 0 0 2pt 0.5pt #f0efef;
 }
 .suggestion-box{
   position: relative;
-  z-index: 2;
+  z-index: 999;
+  
+}
+.c-sugestions {
+z-index: 10;
+position: relative;
+background-color: rgb(251,251,251);
+font-size: 20px;
+border: solid 1px hsla(0, 0%, 0%, 0.25);
+cursor: pointer;
+
+b, strong {
+  font-weight: 500;
+}
 }
