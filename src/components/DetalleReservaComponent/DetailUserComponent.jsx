@@ -1,16 +1,20 @@
 import React from 'react'
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./DetalleReservaComponent.scss";
+import "./DetailUserComponent.scss";
 import "swiper/css";
 import "swiper/css/pagination";
-
+import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from "react-router-dom";
 
 const DetalleReservaComponent = () => {
   return (
     <>
+    <Link to="/config"><ArrowBackComponent/></Link>
     <div className="c-box">
+    
         <Swiper
+        
           modules={[Pagination]}
           spaceBetween={50}
           slidesPerView={1}
@@ -19,6 +23,7 @@ const DetalleReservaComponent = () => {
           onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
+          
             <img
               src="https://i.blogs.es/e1feab/google-fotos/450_1000.jpg"
               alt=""

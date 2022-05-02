@@ -3,6 +3,7 @@ import fotoMarta from "../../assets/images/fotoMarta.png";
 import { Link } from "react-router-dom";
 import "./ConfiguracionUsuario.scss";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
+import UsersComponenet from "../../components/UserComponent/UserComponent";
 
 const ConfiguracionUsuario = () => {
   return (
@@ -10,7 +11,7 @@ const ConfiguracionUsuario = () => {
       <div className="b-General">
         <div className="b-div1">
           <div className="b-divuser">
-            <Link to="/home">
+            <Link to="/detalleusuario">
               <h1 className="b-nombre">Marta</h1>
               <p className="b-text">Puedes ver y editar tu perfil</p>
             </Link>
@@ -27,7 +28,9 @@ const ConfiguracionUsuario = () => {
         </div>
 
         <div className="b-subtitle">
+        <Link to="/invite">
           <h3>Invita a tus amigos</h3>
+          </Link>
           <p className="b-text">Y podrás ganar descuentos para ti</p>
           <p className="b-line"></p>
         </div>
@@ -46,7 +49,9 @@ const ConfiguracionUsuario = () => {
           <p className="b-line"></p>
         </div>
         <div className="b-subtitle">
+        <Link to="/help">
           <h3>Ayuda</h3>
+          </Link>
           <p className="b-line"></p>
         </div>
       </div>

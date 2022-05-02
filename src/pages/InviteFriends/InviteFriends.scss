@@ -1,0 +1,51 @@
+.contenedor-invita{
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(249, 246, 241);
+
+}
+
+.b-cabecerainvite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 0;
+    width: 100%;
+   
+    
+
+   
+} 
+
+.b-cabecera-img{
+    width: 100%;
+    z-index: 10;
+    
+
+}
+
+.texto-invita{
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: column;
+    border-top: solid orange 1px;
+    border-bottom: solid orange 1px;
+   
+    
+}
+.c-arrowinvite{
+position: relative;
+
+
+}

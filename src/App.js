@@ -17,7 +17,7 @@ import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import ReserveCompletePage from "./pages/ReserveCompletePage/ReserveCompletePage";
 import { JwtContext } from "./context/JwtContext";
 import RequireAuth from "./components/RequireAuth/RequireAuth";
-import DetalleReservaComponent from "./components/DetalleReservaComponent/DetalleReservaComponent";
+import DetalleReservaComponent from "./components/DetalleReservaComponent/DetailUserComponent";
 import FichaComponent from "./components/FichaComponent/FichaComponent";
 import PeticionDeReservaComponent from "./components/PeticionDeReservaComponent/PeticionDeReservaComponent";
 import ConfirmacionDeReservaComponent from "./components/ConfirmacionDeReservaComponent/ConfirmacionDeReservaComponent";
@@ -27,6 +27,8 @@ import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 import DetalleReserva from "./pages/DetalleReserva/DetalleReserva";
 import GoogleMapsPage from "./pages/GoogleMapsPage/GoogleMapsPage";
 import ConfiguracionUsuario from "./pages/ConfiguracionUsuario/ConfiguracionUsuario";
+import HelpPage from "./pages/HelpPage/helpPage";
+import InviteFriends from "./pages/InviteFriends/InviteFriends";
 
 
 function App() {
@@ -47,7 +49,7 @@ function App() {
             <Route path="/complete" element={<ReserveCompletePage />} />
             <Route path="/ficha" element={<FichaComponent />} />
             <Route
-              path="/detallereserva"
+              path="/detalleusuario"
               element={<DetalleReservaComponent />}
             />
             <Route
@@ -64,7 +66,8 @@ function App() {
             <Route path="/detallereservausuario" element={<DetalleReserva />} />
             <Route path="/maps" element={<GoogleMapsPage />} />
             <Route path="/config" element={<ConfiguracionUsuario/>}/>
-            
+            <Route path="/help" element={<HelpPage/>}/>
+            <Route path="/Invite" element={<InviteFriends/>}/>
 
             <Route path="/*" element={<Navigate to="/login" />} />
 

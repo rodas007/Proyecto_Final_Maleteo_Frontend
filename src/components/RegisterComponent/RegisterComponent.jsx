@@ -98,7 +98,9 @@ export function RegisterComponent() {
           />
           
         </label>
+        <div className="c-register__btn">
         <button className="b-btn c-register__btn" >Registrarse</button>
+        </div>
       </form>
      
     </div>
