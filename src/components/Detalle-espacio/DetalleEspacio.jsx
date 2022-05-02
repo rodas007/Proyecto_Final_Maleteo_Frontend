@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Dropdown } from 'primereact/dropdown'
+import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from "react-router-dom";
 import './DetalleEspacio.scss'
 import iconoflecha from '../../assets/images/botonContinuar@2x.png';
 
@@ -22,6 +24,9 @@ const DetalleEspacio = () => {
   ]
 
   return (
+    <div>
+        <Link to="/hacerseguardian"><ArrowBackComponent/></Link>
+    
     <div className="contenedor-espacio">
       <h1 className="b-describe">Descríbenos tu espacio</h1>
 
@@ -41,8 +46,10 @@ const DetalleEspacio = () => {
         onChange={(e) => setHabitaculo(e.value)}
         placeholder="Selecciona una opción"
       />
-
-      <button className='btn-flecha'><img src={iconoflecha}></img></button>
+ <Link to="/tusanuncios">
+      <button className='btn-flecha'><img src={iconoflecha} alt="icon arrow"></img></button>
+      </Link>
+    </div>
     </div>
   )
 }

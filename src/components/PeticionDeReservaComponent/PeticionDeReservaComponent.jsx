@@ -1,10 +1,14 @@
 import React from 'react'
 import "./PeticionDeReservaComponent.scss"
+import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from "react-router-dom";
+
 
 const PeticionDeReservaComponent = () => {
   return (
     
     <div className='pet'>
+    <Link to="/home"><ArrowBackComponent/></Link>
         <div className='pet-t'> 
             <h2>Petición de reserva</h2>
         </div>

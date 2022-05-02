@@ -4,6 +4,7 @@ import LoginComponent from '../../components/LoginComponent/LoginComponent';
 import { SocialMediaComponent } from '../../components/SocialMediaComponent/SocialMediaComponent';
 import { SwitchComponent } from '../../components/SwitchComponent/SwitchComponent';
 import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
 
@@ -11,7 +12,7 @@ export default function LoginPage() {
     
   return (
     <div>
-       <ArrowBackComponent/>
+      <Link to="/getstarted"><ArrowBackComponent/></Link>
       <SwitchComponent className="switch"/>
       <h1 className="p-title">Inicia sesión ahora</h1>
       <SocialMediaComponent/>

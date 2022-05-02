@@ -2,10 +2,13 @@ import React from 'react'
 import './TusAnuncios.scss'
 import iconoback from '../../assets/images/iconoback.png'
 import iconomas from '../../assets/images/iconomas.png'
+import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from "react-router-dom";
 
 const TusAnuncios = () => {
   return (
     <div className="b-contenedor">
+    <Link to="/home"><ArrowBackComponent/></Link>
       <div className="b-cabecera">
         <h1 className="tusanuncios">Tus anuncios</h1>
         <h4 className="hall">El hall de Marta</h4>

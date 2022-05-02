@@ -11,7 +11,6 @@ const ConfiguracionUsuario = () => {
         <div className="b-div1">
           <div className="b-divuser">
             <Link to="/home">
-              {" "}
               <h1 className="b-nombre">Marta</h1>
               <p className="b-text">Puedes ver y editar tu perfil</p>
             </Link>
@@ -36,7 +35,7 @@ const ConfiguracionUsuario = () => {
           <h3>Créditos y descuentos</h3>
           <p className="b-line"></p>
         </div>
-        <Link className="linkto" to="./tusAnuncios">
+        <Link to="/hacerseguardian">
           <div className="b-subtitle">
             <h3>Publica tu anuncio o experiencia</h3>
             <p className="b-line"></p>
