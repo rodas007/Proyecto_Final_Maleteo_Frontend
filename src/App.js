@@ -63,7 +63,7 @@ function App() {
             <Route path="/detalleespacio" element={<DetalleEspacio />} />
             <Route path="/detallereservausuario" element={<DetalleReserva />} />
             <Route path="/maps" element={<GoogleMapsPage />} />
-            <Route path="/configuracionUsuario" element={<ConfiguracionUsuario/>}/>
+            <Route path="/config" element={<ConfiguracionUsuario/>}/>
             
 
             <Route path="/*" element={<Navigate to="/login" />} />
