@@ -6,13 +6,15 @@ import { NavComponent } from "../../components/NavComponent/NavComponent";
 import UsersComponenet from "../../components/UserComponent/UserComponent";
 
 const ConfiguracionUsuario = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
   return (
     <div>
       <div className="b-General">
         <div className="b-div1">
           <div className="b-divuser">
-            <Link to="/detalleusuario">
-              <h1 className="b-nombre">Marta</h1>
+            <Link className="linkto" to="/detalleusuario">
+              <h1 className="b-nombre">{user.name}</h1>
               <p className="b-text">Puedes ver y editar tu perfil</p>
             </Link>
           </div>
@@ -28,17 +30,19 @@ const ConfiguracionUsuario = () => {
         </div>
 
         <div className="b-subtitle">
-        <Link to="/invite">
+        <Link className="linkto" to="/invite">
           <h3>Invita a tus amigos</h3>
           </Link>
           <p className="b-text">Y podrás ganar descuentos para ti</p>
           <p className="b-line"></p>
         </div>
         <div className="b-subtitle">
+        <Link className="linkto" to="/discounts">
           <h3>Créditos y descuentos</h3>
+          </Link>
           <p className="b-line"></p>
         </div>
-        <Link to="/hacerseguardian">
+        <Link className="linkto" to="/hacerseguardian">
           <div className="b-subtitle">
             <h3>Publica tu anuncio o experiencia</h3>
             <p className="b-line"></p>
@@ -49,7 +53,7 @@ const ConfiguracionUsuario = () => {
           <p className="b-line"></p>
         </div>
         <div className="b-subtitle">
-        <Link to="/help">
+        <Link className="linkto" to="/help">
           <h3>Ayuda</h3>
           </Link>
           <p className="b-line"></p>

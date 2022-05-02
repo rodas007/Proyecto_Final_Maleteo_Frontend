@@ -17,24 +17,43 @@
 }
 
 
+
 .btn-continuar{
-        background-color: #F68F24;
-        border: 0;
-        border-radius: 5px;
-        color: white;
-        font-weight: bold;
-        width: 100px;
-        height: 40px;
-        margin-left: 35px;
+    position: absolute;
+    background-color: #F68F24;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 40px;
+    margin-left: -100px;
+    margin-top: 16px;
+}
      
 
-    }
+    
 
 
-
+.describe{
+   padding-top: 30px;
+    outline: none;
+    border: 0px;
+    border-color: transparent;
+    margin-bottom: 40px;
+    border-bottom: solid rgb(197, 189, 189) 1px;
+    font-size: larger;
+    width: 94%;
+    
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
+  
+}
 .texto{
     width: 60%;
-    margin-top: 10px;
+    margin-top: 40px;
     margin-left: 15px;
     
 }
@@ -49,7 +68,13 @@
     border: 0px;
     border-bottom: solid rgb(197, 189, 189) 1px;
     padding: 4px;
-    
+    margin-bottom: 40px;
+   
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
 
 }
 .fotos{
@@ -57,6 +82,13 @@
     border: 0px;
     border-bottom: solid rgb(197, 189, 189) 1px;
     padding: 4px;
+    font-weight: bold;
+
+   &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
 
 }
 .form-control{
@@ -67,23 +99,41 @@
     outline: none;
     opacity: 0;
     overflow: hidden;
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
   
 
 }
 
 
 
-.titulo{
+.Titulo{
     width: 85%;
     border: 0px;
     border-bottom: solid rgb(197, 189, 189) 1px;
     padding: 4px;
+    font-weight: bold;
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
 }
 .Disponibilidad{
     width: 85%;
     border: 0px;
     border-bottom: solid rgb(197, 189, 189) 1px;
     padding: 4px;
+    margin-top: 40px;
+    font-weight: bold;
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
 
 }
 .Servicios{
@@ -91,11 +141,25 @@
     border: 0px;
     border-bottom: solid rgb(197, 189, 189) 1px;
     padding: 4px;
+    margin-top: 40px;
+    font-weight: bold;
+    &::placeholder {
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        
+      }
 
+}
+form-control{
+    border-bottom: solid rgb(197, 189, 189) 1px;
+    
 }
 form{
     border: 0px;
     border-color: transparent;
+   
+
+
     padding-right: 20px;
     outline: none;
     & input{
@@ -111,4 +175,15 @@ form{
         outline: none;
 
     }
+
+
+    .mb-3-title{
+        border-bottom: solid rgb(197, 189, 189) 1px;
+        width: 85%;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+            padding: 4px;
+            
+          
+    } 
 }

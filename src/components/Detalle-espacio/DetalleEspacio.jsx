@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 import './DetalleEspacio.scss'
 import iconoflecha from '../../assets/images/botonContinuar@2x.png';
 
-const DetalleEspacio = () => {
+const DetalleEspacio = ({register}) => {
+
+  console.log(register);
   const [propiedad, setPropiedad] = useState([])
   const [habitaculo, setHabitaculo] = useState([])
 

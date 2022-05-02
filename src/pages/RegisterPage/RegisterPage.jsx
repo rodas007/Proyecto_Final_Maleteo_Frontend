@@ -12,7 +12,7 @@ export function RegisterPage() {
   return (
     <div>
      <Link to="/login"><ArrowBackComponent/></Link>
-     
+     <SwitchComponent className="switch"/>
       <h1 className="p-title">Únete a Maleteo y disfruta de sus ventajas</h1>
       <SocialMediaComponent/>
       <div className="correo">

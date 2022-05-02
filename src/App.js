@@ -29,6 +29,8 @@ import GoogleMapsPage from "./pages/GoogleMapsPage/GoogleMapsPage";
 import ConfiguracionUsuario from "./pages/ConfiguracionUsuario/ConfiguracionUsuario";
 import HelpPage from "./pages/HelpPage/helpPage";
 import InviteFriends from "./pages/InviteFriends/InviteFriends";
+import UserMessageComponent from "./components/UserMessageComponent/UserMessageComponent";
+import { DiscountComponent } from "./components/DiscountComponent/DiscountComponent";
 
 
 function App() {
@@ -38,7 +40,11 @@ function App() {
     <JwtContext.Provider value={{ jwt, setJwt }}>
       <Router>
         <div className="">
+       
+               
+                
           <Routes>
+          
             <Route path="/" element={<LogoPage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/welcome" element={<WelcomePage />} />
@@ -68,7 +74,8 @@ function App() {
             <Route path="/config" element={<ConfiguracionUsuario/>}/>
             <Route path="/help" element={<HelpPage/>}/>
             <Route path="/Invite" element={<InviteFriends/>}/>
-
+            <Route path="/messages" element={<UserMessageComponent/>}/>
+            <Route path="/discounts" element={<DiscountComponent/>}/>
             <Route path="/*" element={<Navigate to="/login" />} />
 
           </Routes>

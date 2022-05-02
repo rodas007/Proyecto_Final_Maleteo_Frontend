@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 
 const InviteFriends = () =>{
-    return(<div className="contenedor-invita">
+    return(
+    <div className="contenedor-invita background-orange">
     <div className="b-cabecerainvite"><img className="b-cabecera-img" src="https://img.freepik.com/free-photo/group-diverse-friends-playing-game-mobile-phone_53876-82395.jpg" alt="fotocabececera" ></img></div>
     <div className="c-arrowinvite"><Link to="/config"><ArrowBackComponent className="c-arrow"/></Link> </div>
        <div className="texto-invita">
@@ -16,7 +17,12 @@ const InviteFriends = () =>{
         <p>Regístrate en Maleteo, déscargate la APP y manda el link a tus amigos</p>
         <h1>¿Aún hay más?</h1>
         <p>¿Quieres ser Guardian? Consigue más de 10 reservas en un més y llévate <b>3€</b> extra por cada una de ellas</p>
-        </div></div>
+
+
+
+        </div>
+        <p>Link invitado: https://cutt.ly/iGDf5qR</p>
+        </div>
     )
 
 }

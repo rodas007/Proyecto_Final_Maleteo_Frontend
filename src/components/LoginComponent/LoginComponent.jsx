@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { JwtContext } from "../../context/JwtContext";
 import { API } from "../../services/api";
 import "./LoginComponent.scss";
@@ -7,12 +8,14 @@ import "./LoginComponent.scss";
 export default function LoginComponent() {
   const { register, handleSubmit } = useForm();
   const { setJwt } = useContext(JwtContext);
+  const navigate = useNavigate();
 
   const onSubmit = (formData) => {
     API.post("login", formData).then((res) => {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
       setJwt(true);
+      navigate('/home');
     });
   };
 

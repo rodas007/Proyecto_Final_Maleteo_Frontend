@@ -1,48 +1,115 @@
-import React from "react";
+import { useForm } from "react-hook-form";
 import "./HacerseGuardian.scss";
-import { useState } from "react";
 import { ArrowBackComponent } from "../../components/ArrowBackComponent/ArrowBackComponent";
 import { Link } from "react-router-dom";
+import { API } from "../../services/api";
+import { useState } from "react";
+import DetalleEspacio from "../../components/Detalle-espacio/DetalleEspacio";
+
+
+
+
 const HacerseGuardian = () => {
+  
+
+
+
+  const { register, handleSubmit } = useForm();
+console.log(register);
+
+  const onSubmit = formData => {
+    API.post('espacios', formData).then(res => {
+        console.log('Register espacios',);
+    })
+}
   return (
     <>
+     
+    
       <div className="b-encabezado">
-      <Link to="/config"><ArrowBackComponent/></Link>
-        <div className="texto">
-          <p>Configura tu espacio en muy pocos pasos</p>
-        </div>
+        <Link to="/config">
+          <ArrowBackComponent />
+        </Link>
+
+        <p>Configura tu espacio en muy pocos pasos</p>
       </div>
       <div className="b-global">
         <div className="b-describe">
-       
-          <p className="text-describe">
-          <Link to="/detalleespacio">
-            Describe tu espacio{" "}
-            <button className="btn-continuar"         >Continuar</button>
-            </Link>
-          </p>
-          <form>
-            <h6 className="Ubi">Ubicación</h6>
-            <input type="text" />
+          <input
+            className="describe"
+            type="text"
+            placeholder="Describe tu espacio"
+            {...register("locker", {
+              required: true,
+            })}
+          />
 
-            <h6 className="fotos">Fotos</h6>
-            <div className="mb-3">
-              <input className="form-control" type="file" id="formFile"></input>
+         
+
+          <form  onSubmit={handleSubmit(onSubmit)}>
+          
+            <button className="btn-continuar" >Continuar</button>
+          
+            <div>
+              <input
+                className="Ubi"
+                type="text"
+                placeholder="Ubicacion"
+                {...register("localization", {
+                  required: true,
+                })}
+              />
             </div>
 
-            <h6 className="titulo">Titulo</h6>
-            <input type="text" name="titulo" id="title" />
+            <div className="mb-3">
+              <h6 className="mb-3-title">Fotos</h6>
+              <input
+                className="form-control"
+                type="file"
+                placeholder="Fotos"
+                id="formFile"
+               
+              />
+            </div>
 
-            <h6 className="Disponibilidad">Disponibilidad y horarios</h6>
-            <input type="text" />
+            <input
+              className="Titulo"
+              type="text"
+              name="titulo"
+              id="title"
+              placeholder="Titulo"
+              {...register("title", {
+                  required: true,
+                })}
+            />
 
-            <h6 className="Servicios">Servicios</h6>
+            <input
+              className="Disponibilidad"
+              type="text"
+              placeholder="Disponibilidad"
+              {...register("availability", {
+                required: true,
+        
+              })} 
+          />
+            
 
-            <textarea name="description" />
-          </form>{" "}
+            <textarea
+              className="Servicios"
+              name="description"
+              placeholder="Servicios"
+              {...register("services", {
+                required: true,
+        
+              })} 
+          
+            />
+          </form>
         </div>
       </div>
     </>
+    
+  
   );
 };
 export default HacerseGuardian;

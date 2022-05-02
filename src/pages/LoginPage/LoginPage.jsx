@@ -5,6 +5,7 @@ import { SocialMediaComponent } from '../../components/SocialMediaComponent/Soci
 import { SwitchComponent } from '../../components/SwitchComponent/SwitchComponent';
 import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
 import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 export default function LoginPage() {
 
@@ -14,6 +15,7 @@ export default function LoginPage() {
     <div>
       <Link to="/getstarted"><ArrowBackComponent/></Link>
       <SwitchComponent className="switch"/>
+      {/* <NavLink className="register-nav__b-btn" to="/register">Register</NavLink> */}
       <h1 className="p-title">Inicia sesión ahora</h1>
       <SocialMediaComponent/>
       <div className="correo">
