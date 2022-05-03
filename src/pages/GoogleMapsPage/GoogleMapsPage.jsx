@@ -56,8 +56,9 @@ export default function GoogleMapsPage() {
       
       </GoogleMap>
       <GuardianSlider/>
+      <div className="c-navcomponent">
       <NavComponent/>
-      
+      </div>
       </div>
       </>
     );

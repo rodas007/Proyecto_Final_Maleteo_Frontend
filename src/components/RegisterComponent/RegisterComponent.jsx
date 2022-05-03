@@ -42,7 +42,7 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            placeholder="Name"
+            placeholder="Nombre"
               id="name"
               defaultValue=""
               {...register("name", {
@@ -56,7 +56,7 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            placeholder="SurName"
+            placeholder="Apellidos"
               id="surname"
               defaultValue=""
               {...register("surname", {
@@ -73,7 +73,7 @@ export function RegisterComponent() {
             id="password"
             type="password"
             name="password"
-              placeholder="password"
+              placeholder="Contraseña"
               defaultValue={""}
               {...register("password", {
                 required: true,

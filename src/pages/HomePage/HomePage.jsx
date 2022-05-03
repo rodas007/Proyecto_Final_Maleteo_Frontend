@@ -101,7 +101,7 @@ export default function HomePage() {
             </select>
           </div>
           <div className="c-prueba3">
-            <Link to="#">
+            <Link to="/maps">
               <button className="b-btn">Buscar</button>
             </Link>
           </div>

@@ -54,25 +54,7 @@ const DetalleEspacio = ({ data }) => {
 
         <h5 className="b-especifica">Especifíca tu propiedad</h5>
         <form onSubmit={handleSubmit(onSubmit)}>
-         {/*  <Dropdown
-          
-            className="p-dropdown"
-           
-            value={propiedad}
-            options={propiedadSelectItems}
-            onChange={(e) => setPropiedad(e.value)}
-            
-          
-           
-          />
-          <h5 className="b-tipoespacio">¿Qué tipo de espacio?</h5>
-          <Dropdown
-          
-            value={habitaculo}
-            options={habitaculoSelectItems}
-            onChange={(e) => setHabitaculo(e.value)}
-            
-          /> */}
+         
           
           <select className="c-detail-form" {...register("space", {
               required: true,
@@ -98,10 +80,10 @@ const DetalleEspacio = ({ data }) => {
 
     </select>
           
-            <button className="btn-flecha">
+    <Link to="/tusanuncios"> <button className="btn-flecha">
               <img src={iconoflecha} alt="icon arrow"></img>
             </button>
-          
+          </Link>
         </form>
       </div>
     </div>
