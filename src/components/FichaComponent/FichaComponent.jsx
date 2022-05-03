@@ -22,26 +22,26 @@ const FichaComponent = () => {
         >
           <SwiperSlide>
             <img
-              src="https://i.blogs.es/e1feab/google-fotos/450_1000.jpg"
-              alt=""
+              src="https://www.espaciosadaptados.com/images/rustic-dining-room-PH8RJ27.jpg"
+              alt="salon"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://josefacchin.com/wp-content/uploads/2020/02/como-quitar-el-fondo-de-una-imagen.png"
-              alt=""
+              src="https://mx.habcdn.com/photos/project/medium/buhardilla-534850.jpg"
+              alt="buhardilla"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png"
-              alt=""
+              src="https://img.freepik.com/foto-gratis/muebles-nuevos-empotrados-pequeno-vestidor-trastero-moderno-vacio-cajones-armario-mucho-espacio-perchas_157754-390.jpg"
+              alt="armario"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png"
-              alt=""
+              src="https://s3images.coroflot.com/user_files/individual_files/large_203306_CsygzzGzyisXBgAaTAwZhdSXP.JPG"
+              alt="entrada"
             />
           </SwiperSlide>
         </Swiper>
