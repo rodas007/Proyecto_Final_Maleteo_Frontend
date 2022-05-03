@@ -2,13 +2,15 @@ import "./FichaComponent.scss";
 
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
+import { ArrowBackComponent } from "../ArrowBackComponent/ArrowBackComponent";
 
 const FichaComponent = () => {
   return (
     <>
+    <Link to="/maps"><ArrowBackComponent/></Link>
       <div className="c-box">
         <Swiper
           modules={[Pagination]}
@@ -203,68 +205,16 @@ const FichaComponent = () => {
               Cómo debe ser tu maleta
             </a>
           </div>
-          <div className="normas-a">
-            <a className="normas-a-t " href="Tipo de cancelación de reserva">
-              Tipo de cancelación de reserva
-            </a>
-          </div>
-          <div className="normas-a">
-            <a className="normas-a-t " href="Contactar con tu guardián">
-              Contactar con tu guardián
-            </a>
-          </div>
-          <div className="normas-a">
-            <a className="normas-a-t " href="Denunciar anuncio">
-              Denunciar anuncio
-            </a>
-          </div>
-        </div>
-      </>
-      <>
-        <div className="otros">
-          <h2>Otros lockers cerca de ti</h2>
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={50}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-          >
-            <SwiperSlide>
-              <img className="otros-img"
-                src="https://cdn.locktec.com/locktec/images/locksafe/Locksafe_Schliessfaecher_Freizeitpark.jpg"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="otros-img"
-                src="https://josefacchin.com/wp-content/uploads/2020/02/como-quitar-el-fondo-de-una-imagen.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="otros-img"
-                src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="otros-img"
-                src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/02/Consejos-para-hacer-ima%CC%81genes-increi%CC%81bles-1024x538.png"
-                alt=""
-              />
-            </SwiperSlide>
-          </Swiper>
+         
         </div>
         <footer>
           <div className="footer">
             <div className="footer-cont1">
               <p className="footer-cont1-text">Total 12€</p>
-              <a className="footer-cont1-a" href="Desglose del precio">Desglose del precio</a>
+            
             </div>
             <div className="footer-cont2">
-              <button className="footer-cont2-btn">Reservar Ahora</button>
+            <Link to="/detallereservausuario"> <button className="footer-cont2-btn">Reservar Ahora</button></Link>
             </div>
           </div>
         </footer>

@@ -73,7 +73,8 @@ const DetalleEspacio = ({ data }) => {
             onChange={(e) => setHabitaculo(e.value)}
             
           /> */}
-          <select  {...register("space", {
+          
+          <select className="c-detail-form" {...register("space", {
               required: true,
             })}>
 
@@ -84,7 +85,8 @@ const DetalleEspacio = ({ data }) => {
 ))}
 
 </select>
- <select  {...register("property", {
+
+ <select className="c-detail-form"  {...register("property", {
               required: true,
             })}>
 

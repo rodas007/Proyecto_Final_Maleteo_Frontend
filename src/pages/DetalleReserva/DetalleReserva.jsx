@@ -1,23 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./DetalleReserva.scss"
+import { ArrowBackComponent } from "../../components/ArrowBackComponent/ArrowBackComponent";
+import { NavComponent } from "../../components/NavComponent/NavComponent";
+
 
 const DetalleReserva = () =>{
     return(
-        <section className="b-Cabecera2">
+        <div className="c-detail-box">
+            
+   
+<Link to="/ficha"> <ArrowBackComponent/></Link>
            <div className="b-box12">
         <h1 className="detalle"> Detalles de tu reserva</h1>
         <div className="lista-opcion">
-            <ul className="b-row12">
+            <ul className="b-fila">
                 <li><h5>LLegada</h5></li>
                 <li><h5>Recogida</h5></li>
                 <li><h5>Equipaje</h5></li>
             </ul>
-            <ul>
-                <li><p>30 de Julio</p></li>
-                <li><p>30 de Julio</p></li>
-                <li><p>2 Equipajes</p></li>
+            <ul className="b-fila">
+                <li className="c-detail-li"><p>04 de Mayo 2022</p></li>
+                <li className="c-detail-li"><p>05 de Mayo 2022</p></li>
+                <li className="c-detail-li"><p>2 Equipajes</p></li>
             </ul>
-        </div> </div>
+        </div>
+         </div>
 
         <div className="b-tarifas">
 
@@ -34,16 +42,18 @@ const DetalleReserva = () =>{
          <b><p className="b-tarifas_price12"> 12€ </p></b></div>
 
 
-
-         <button className="btwwn-reserva">Reservar</button>
+        <div className="b-btn-cont">
+         <Link to="/complete"><button className="b-btn-reserva">Reservar</button></Link>
+      <NavComponent/>   
+</div>
 
         </div>
          
         
         
         
-        </section>
-
+     
+        </div>
        
     )
 

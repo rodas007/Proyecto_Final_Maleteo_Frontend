@@ -1,7 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { JwtContext } from "../../contexts/JwtContext";
+import { JwtContext } from "../../context/JwtContext";
+
 import "./AuthButton.scss"
 
 export default function AuthButton () {
@@ -18,15 +19,14 @@ export default function AuthButton () {
 
     return jwt ? (
 
-        <div  className="loggedin">
-        <p>
-            Welcome! {user.name}
-            <button
+        <div  className="c-loggedin">
+        
+            <button className="c-button-logout" 
                 onClick={signOut}
             >
-                Sign out
+                Cerrar Sesion
             </button>
-        </p>
+        
         </div>
         
     )

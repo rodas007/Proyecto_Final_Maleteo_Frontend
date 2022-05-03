@@ -12,7 +12,7 @@ import "./SliderHome.scss";
 
 const SliderHome = ({novedades}) => {
 
-
+console.log("NOVEDAD 1",novedades)
   return (
     <div className="c-slider">
     <h1 className="c-slider__text">Novedades</h1>

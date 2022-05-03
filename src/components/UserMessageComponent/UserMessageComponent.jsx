@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const UserMessageComponent = () => {
   return (
+    <>
     <div className='c-msjus-cont'>
         <div className='c-msjus-cont-top'>
             <h2 className='c-msjus-cont-top-text'>Mensajes</h2>
@@ -15,7 +16,7 @@ const UserMessageComponent = () => {
             </div> 
             <div className='c-us-msjs'>
                 <div className='c-us-msjs-top'>
-                <p className='c-us-msjs-top-t'>Marta</p> <Link to="/confirmaciondereserva"> <a className='c-us-msjs-top-a' href="Confirmada">Confirmada</a></Link></div>
+                <p className='c-us-msjs-top-t'>Marta</p> <Link className='c-us-msjs-top-a' to="/confirmaciondereserva"> <a className='c-us-msjs-top-a' href="Confirmada">Confirmada</a></Link></div>
                 <div className='c-us-msjs-mid'>
                 <p className='c-us-msjs-mid-t'>30 deJulio a las 16:00.</p>
                 </div>
@@ -24,10 +25,13 @@ const UserMessageComponent = () => {
                 </div>
                 
             </div>    
-             <NavComponent/>
+             
         </div>   
-
+        
     </div>
+    
+    <NavComponent/>
+    </>
   )
 }
 
