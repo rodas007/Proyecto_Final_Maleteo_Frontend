@@ -2,25 +2,30 @@ import { useForm } from "react-hook-form";
 import "./HacerseGuardian.scss";
 import { ArrowBackComponent } from "../../components/ArrowBackComponent/ArrowBackComponent";
 import { Link } from "react-router-dom";
-import { API } from "../../services/api";
+//import { API } from "../../services/api";
 import { useState } from "react";
 import DetalleEspacio from "../../components/Detalle-espacio/DetalleEspacio";
 
 
 
-
 const HacerseGuardian = () => {
-  
+
+  const [data, setData] = useState();
+ const [form, setForm] = useState(false);
 
 
 
   const { register, handleSubmit } = useForm();
 console.log(register);
 
+
   const onSubmit = formData => {
-    API.post('espacios', formData).then(res => {
+    console.log(formData);
+    setForm(true);
+    setData(formData);
+   /*  API.post('espacios', formData).then(res => {
         console.log('Register espacios',);
-    })
+    }) */
 }
   return (
     <>
@@ -45,7 +50,7 @@ console.log(register);
           />
 
          
-
+{!form ? 
           <form  onSubmit={handleSubmit(onSubmit)}>
           
             <button className="btn-continuar" >Continuar</button>
@@ -105,6 +110,7 @@ console.log(register);
           
             />
           </form>
+          : <DetalleEspacio data={data} />}
         </div>
       </div>
     </>
