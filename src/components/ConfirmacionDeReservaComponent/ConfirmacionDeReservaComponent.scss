@@ -1,5 +1,5 @@
 .conf{
-    height: 600px;
+    height: 650px;
 }
 .head{
     font-size: x-large;
@@ -9,6 +9,7 @@
 }
 .head-text{
     padding-left: 50px;
+    margin-top: 20px;
     }
 
 .cont-1{
@@ -91,11 +92,14 @@ padding-top: 10px;
         font-weight: 500;
         font-size: x-large;
         color: rgba(0, 0, 0, 0.528);
+        border: 0px;
+        outline: none;
     }
 
     &-d{
         font-weight: 700;
         font-size: large;
         color: rgba(0, 0, 0, 0.693);
+        margin-bottom: 0px;
     }
 }

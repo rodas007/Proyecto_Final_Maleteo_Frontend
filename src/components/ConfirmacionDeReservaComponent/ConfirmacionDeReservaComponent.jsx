@@ -1,10 +1,13 @@
 import React from 'react'
 import "./ConfirmacionDeReservaComponent.scss"
+import { ArrowBackComponent } from '../../components/ArrowBackComponent/ArrowBackComponent';
+import { Link } from 'react-router-dom';
 
 const ConfirmacionDeReservaComponent = () => {
   return (
       <>
     <div className='conf'>
+    <Link to="/messages" ><ArrowBackComponent/> </Link>
     <div className='head'> <div className='head-text'>Carlos</div> </div>
     <div className='cont-1'>
         <div className='cont-1-res'>
@@ -26,7 +29,8 @@ Estaré encantada de cuidar de tu equipaje. Mi teléfono es 634723485.</p> </div
     
     </div>
     <div className='cont-3'>
-    <p className='cont-3-i'>Escribe un mensaje</p>
+      <input placeholder='Escribe un mensaje' className='cont-3-i' type="text" name="Escribe un mensaje" id="" />
+    {/* <p className='cont-3-i'>Escribe un mensaje</p> */}
     <p className='cont-3-d'>Enviar</p>
 </div>
 </>

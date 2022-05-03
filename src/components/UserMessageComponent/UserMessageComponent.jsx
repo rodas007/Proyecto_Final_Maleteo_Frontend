@@ -1,6 +1,7 @@
 import React from 'react'
 import "./UserMessageComponent.scss"
 import { NavComponent } from "../NavComponent/NavComponent";
+import { Link } from 'react-router-dom';
 
 const UserMessageComponent = () => {
   return (
@@ -14,7 +15,7 @@ const UserMessageComponent = () => {
             </div> 
             <div className='c-us-msjs'>
                 <div className='c-us-msjs-top'>
-                <p className='c-us-msjs-top-t'>Marta</p> <a className='c-us-msjs-top-a' href="Confirmada">Confirmada</a></div>
+                <p className='c-us-msjs-top-t'>Marta</p> <Link to="/confirmaciondereserva"> <a className='c-us-msjs-top-a' href="Confirmada">Confirmada</a></Link></div>
                 <div className='c-us-msjs-mid'>
                 <p className='c-us-msjs-mid-t'>30 deJulio a las 16:00.</p>
                 </div>
