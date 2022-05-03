@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./DetalleReserva.scss"
 
 const DetalleReserva = () =>{
@@ -35,7 +36,7 @@ const DetalleReserva = () =>{
 
 
 
-         <button className="btwwn-reserva">Reservar</button>
+         <Link to="/complete"><button className="b-btn-reserva">Reservar</button></Link>
 
         </div>
          

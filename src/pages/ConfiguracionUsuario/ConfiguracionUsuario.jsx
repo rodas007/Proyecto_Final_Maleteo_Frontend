@@ -19,7 +19,7 @@ const ConfiguracionUsuario = () => {
         <div className="b-div1">
           <div className="b-divuser">
             <Link className="linkto" to="/detalleusuario">
-              <h1 className="b-nombre">Hola,{user.name}</h1>
+              <h1 className="b-nombre">Hola, {user.name}</h1>
               <p className="b-text">Puedes ver y editar tu perfil</p>
             </Link>
           </div>

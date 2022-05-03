@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 const DetalleReservaComponent = () => {
   return (
     <>
-    <Link to="/config"><ArrowBackComponent/></Link>
+    <Link to="/confirmaciondereserva"><ArrowBackComponent/></Link>
     <div className="c-box">
     
         <Swiper

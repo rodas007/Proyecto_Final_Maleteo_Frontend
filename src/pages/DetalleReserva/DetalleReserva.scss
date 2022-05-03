@@ -21,16 +21,7 @@
     color: #010101;
     
 }
-ul{
-   /*  display: flex;
-    
-    align-items: flex-start;
-    justify-content: space-evenly; */
-    list-style: none;
-    
-    
-    
-}
+
 
 .lista-opcion{
     border-bottom: rgb(84, 81, 81) 1px;
@@ -87,18 +78,17 @@ ul{
         color:rgb(72, 71, 71) ;
 
     }
-    .btn-reserva{
-        margin-top: 30%;
-        margin-left: 10%;
-        display: flex;
+    
+
+    .b-btn-reserva{ 
+        width: 44vw;
+        height: 40pt;
+        background-color: rgb(246, 143, 36);
+        color: white;
+        text-align: center;
+        border-radius: 3pt;
         border: none;
-        align-items: center;
-        justify-content: center;
-        width: 270px;
-        height: 50px;
-        background-color: #F68F24;
-        color:white;
-        border-radius: 8px;
-        font-weight: bold;
-    }
+        box-shadow: 0 1px 4px rgb(0 0 0 / 30%), 0 0 40px rgb(0 0 0 / 10%);
+
+}
 }
