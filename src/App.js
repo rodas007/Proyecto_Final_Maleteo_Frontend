@@ -26,12 +26,13 @@ import HacerseGuardian from "./pages/HacerseGuardian/HacerseGuardian";
 import DetalleEspacio from "./components/Detalle-espacio/DetalleEspacio";
 import DetalleReserva from "./pages/DetalleReserva/DetalleReserva";
 import GoogleMapsPage from "./pages/GoogleMapsPage/GoogleMapsPage";
+import GuardianSlider from "./components/GuardlianSlider/GuardianSlider";
 import ConfiguracionUsuario from "./pages/ConfiguracionUsuario/ConfiguracionUsuario";
 import HelpPage from "./pages/HelpPage/helpPage";
 import InviteFriends from "./pages/InviteFriends/InviteFriends";
 import UserMessageComponent from "./components/UserMessageComponent/UserMessageComponent";
 import { DiscountComponent } from "./components/DiscountComponent/DiscountComponent";
-
+import SliderMap from "./components/SliderMap/SliderMap";
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token") || null);
@@ -68,6 +69,8 @@ function App() {
             />
             <Route path="/tusanuncios" element={<TusAnuncios />} />
             <Route path="/hacerseguardian" element={<HacerseGuardian />} />
+            <Route path="/guardianslider" element={<GuardianSlider/>}/>
+            <Route path="/slidermap" element={<SliderMap/>}/>
             <Route path="/detalleespacio" element={<DetalleEspacio />} />
             <Route path="/detallereservausuario" element={<DetalleReserva />} />
             <Route path="/maps" element={<GoogleMapsPage />} />

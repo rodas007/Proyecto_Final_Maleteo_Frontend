@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import localizacion from "../../assets/images/ubicacion.png";
+import GuardianSlider from "../../components/GuardlianSlider/GuardianSlider";
 import iconback from "../../assets/images/whiteback.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
@@ -52,7 +53,7 @@ export default function GoogleMapsPage() {
        {isMounted && <Marker position={centerTest2} />}
         
       </GoogleMap>
-      
+      <GuardianSlider/>
       <NavComponent/>
       </div>
       </>
