@@ -5,6 +5,8 @@ import localizacion from "../../assets/images/ubicacion.png";
 import iconback from "../../assets/images/whiteback.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
+import { NewsComponent } from "../../components/NewsComponent/NewsComponent";
+import SliderHome from "../../components/SliderHome/SliderHome";
 const containerStyle = {
   width: '414px',
   height: '736px'
@@ -50,10 +52,11 @@ export default function GoogleMapsPage() {
        {isMounted && <Marker position={center} />}
        {isMounted && <Marker position={centerTest} />}
        {isMounted && <Marker position={centerTest2} />}
-        
+      
       </GoogleMap>
       
       <NavComponent/>
+      
       </div>
       </>
     );
