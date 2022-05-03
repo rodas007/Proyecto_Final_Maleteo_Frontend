@@ -8,7 +8,7 @@ export default function LogoPage () {
 
     return(
         <>
-         <meta httpEquiv="refresh" content="1;URL=/welcome" /> 
+         <meta httpEquiv="refresh" content="2;URL=/welcome" /> 
         <div className="background-orange">
             <div className="p-logo">
                 <img  src={logoMaleteo} alt="logo maleteo" className="p-logo__img"/>
