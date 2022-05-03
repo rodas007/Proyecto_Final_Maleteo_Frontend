@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./NavbarGuardian.scss"
-import user from '../../assets/images/usuario@3x.png';
+import user from '../../assets/images/usuario@3x.png'
 import home from '../../assets/images/inicio@3x.png';
 import calendar from '../../assets/images/calendarnav.svg';
 import anuncio from '../../assets/images/anuncio.svg';
@@ -9,23 +9,23 @@ import anuncio from '../../assets/images/anuncio.svg';
 
 export const NavbarGuardian = () => {
   return (
-      <nav>
-      <ul>
-          <Link to="/" className="navGuardian_home">
-          <img src={home} alt="Home" />
+    <div className="c-nav">
+      
+          <Link to="/home" >
+          <img src={home} className="c-nav__home" alt="Home" />
           </Link>
-          <Link to="/" className="navGuardian_anuncio">
-          <img src={anuncio} alt="Anuncio" />
+          <Link to="/tusanuncios" >
+          <img src={anuncio} className="c-nav__search" alt="Anuncio" />
           </Link>
-          <Link to="/" className="navGuardian_calendar">
-          <img src={calendar} alt="Calendar" />
+          <Link to="/" >
+          <img src={calendar} className="c-nav__chat" alt="Calendar" />
           </Link>
-          <Link to="/" className="navGuardian_user">
-          <img src={user} alt="User" />
+          <Link to="/config" >
+          <img src={user} className="c-nav__user" alt="User" />
           </Link>
-      </ul>
+     
 
-      </nav>
+          </div>
     
   )
 }

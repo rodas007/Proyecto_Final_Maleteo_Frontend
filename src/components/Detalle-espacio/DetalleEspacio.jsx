@@ -6,10 +6,11 @@ import "./DetalleEspacio.scss";
 import iconoflecha from "../../assets/images/botonContinuar@2x.png";
 import { API } from "../../services/api";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 
 const DetalleEspacio = ({ data }) => {
-
+  const navigate = useNavigate();
   
   const { register, handleSubmit } = useForm();
 
@@ -20,14 +21,14 @@ const DetalleEspacio = ({ data }) => {
     console.log(datosForm);
      API.post("espacios", datosForm).then((res) => {
       console.log("Register espacios");
+      navigate('/tusanuncios');
      
     }); 
    /*  console.log(formData); */
    
   };
   
-  const [propiedad, setPropiedad] = useState([]);
-  const [habitaculo, setHabitaculo] = useState([]);
+ 
 
   const propiedadSelectItems = [
     { label: "Casa", value: "Casa" },
@@ -80,10 +81,10 @@ const DetalleEspacio = ({ data }) => {
 
     </select>
           
-    <Link to="/tusanuncios"> <button className="btn-flecha">
+     <button className="btn-flecha">
               <img src={iconoflecha} alt="icon arrow"></img>
             </button>
-          </Link>
+          
         </form>
       </div>
     </div>

@@ -5,13 +5,19 @@ import "./ConfiguracionUsuario.scss";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import UsersComponenet from "../../components/UserComponent/UserComponent";
 import AuthButton from "../../components/AuthButton/AuthButton";
+import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
+import { API } from "../../services/api";
 
 const ConfiguracionUsuario = () => {
   const [show, setShow] = useState(false);
-
-
-
   const user = JSON.parse(localStorage.getItem("user"));
+  const onGuardian = () => {
+    API.patch(`users/${user._id}`, { role: "admin" }).then((res) => {
+        console.log("Register user as Guardian");
+    });
+};
+
+
 
   return (
     <div>
@@ -29,7 +35,7 @@ const ConfiguracionUsuario = () => {
 
           <div className="b-subtitle">
             <h3 onClick={() => {
-          setShow(!show);
+          setShow(!show);onGuardian();
         }} >Conviértete en guardian {show ? '' : ''} </h3>
             <p className="b-text">Puedes ganar desde 400e de media al mes</p>
             <p className="b-line"></p>
@@ -70,7 +76,7 @@ const ConfiguracionUsuario = () => {
         </div>
       </div>
       <AuthButton/>
-      <NavComponent />
+      {user.role === "admin" ?  <NavbarGuardian/> : <NavComponent />}
     </div>
   );
 };
