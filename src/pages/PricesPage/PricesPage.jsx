@@ -1,8 +1,9 @@
 import React from "react";
-//import {NavComponent} from "../../shared/components/NavComponent/NavComponent";
 import './PricesPage.scss'
-// import {ArrowBackComponent} from "../../shared/components/ArrowBackComponent/ArrowBackComponent";
-//import {useLocation} from "react-router-dom";
+
+import { ArrowBackComponent } from "../../components/ArrowBackComponent/ArrowBackComponent";
+import { NavComponent } from "../../components/NavComponent/NavComponent";
+import { Link } from "react-router-dom";
 
 export function PricesPage() {
 
@@ -11,15 +12,17 @@ export function PricesPage() {
   
 
     return(
-      <div>
+    
         <div className="p-prices">
-           {/*  <ArrowBackComponent navigation={navigation}/> */}
+            <Link to="/getstarted" ><ArrowBackComponent/> </Link>
             <div className="p-prices__container">
-            <p className="b-title">Selecciona</p>
+            <p className="b-title-t">Selecciona</p>
             <select className="b-select">
+            <option className="b-region" disabled selected>Selecciona tu region</option>
                 <option value="europa">Europa</option>
                 <option value="america">America</option>
             </select>
+            </div>
                 <p className="b-title">Nuestras tarifas fijas</p>
 
                 <div className="p-prices__item">
@@ -33,9 +36,11 @@ export function PricesPage() {
                     <p className="p-prices__price">4€</p>
                     <p>Por equipaje</p>
                 </div>
+
+                <div>
+                    <NavComponent />
+                </div>
             </div>
-        </div>
-        {/* <NavComponent navigation={navigation}/> */}
-      </div>
+     
     )
 }
