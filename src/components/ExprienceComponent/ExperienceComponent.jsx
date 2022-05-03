@@ -10,8 +10,8 @@ export function ExperienceComponent({experiences}) {
             <p className="c-title-primary">Experiencias</p>
             <div className="c-experience__container">
                 {
-                    experiences?.map( (experiences, key) =>
-                  <div key={key} className="c-experience__item">
+                    experiences?.map( (experiences) =>
+                  <div key={experiences.text} className="c-experience__item">
                 <div className="c-experience__container-img">
                     <img src={experiences?.image} alt="/" className="c-experience__img" />
                 </div>

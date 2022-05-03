@@ -54,16 +54,15 @@ const DetalleEspacio = ({ data }) => {
 
         <h5 className="b-especifica">Especifíca tu propiedad</h5>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Dropdown
+         {/*  <Dropdown
           
             className="p-dropdown"
+           
             value={propiedad}
             options={propiedadSelectItems}
             onChange={(e) => setPropiedad(e.value)}
-            {...register("property", {
-              required: true,
-            })}
-            placeholder="Casa"
+            
+          
            
           />
           <h5 className="b-tipoespacio">¿Qué tipo de espacio?</h5>
@@ -72,10 +71,11 @@ const DetalleEspacio = ({ data }) => {
             value={habitaculo}
             options={habitaculoSelectItems}
             onChange={(e) => setHabitaculo(e.value)}
-            placeholder={habitaculo}
             
-          />
-          <select>
+          /> */}
+          <select  {...register("space", {
+              required: true,
+            })}>
 
 {propiedadSelectItems.map((option) => (
 
@@ -84,6 +84,17 @@ const DetalleEspacio = ({ data }) => {
 ))}
 
 </select>
+ <select  {...register("property", {
+              required: true,
+            })}>
+
+{habitaculoSelectItems.map((option) => (
+
+  <option value={option.value}>{option.label}</option>
+
+))}
+
+    </select>
           
             <button className="btn-flecha">
               <img src={iconoflecha} alt="icon arrow"></img>

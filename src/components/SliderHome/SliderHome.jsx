@@ -26,8 +26,8 @@ const SliderHome = ({novedades}) => {
           onSlideChange={() => console.log("slide change")}
         >
 
-{novedades?.map((novedad, key)=>
-            <div key={key} className="c-news__item">
+{novedades?.map((novedad)=>
+            <div key={novedad.text} className="c-news__item">
 
           <SwiperSlide>
             <img className="c-news__item-img" alt={novedad.title}  
