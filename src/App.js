@@ -31,6 +31,7 @@ import HelpPage from "./pages/HelpPage/helpPage";
 import InviteFriends from "./pages/InviteFriends/InviteFriends";
 import UserMessageComponent from "./components/UserMessageComponent/UserMessageComponent";
 import { DiscountComponent } from "./components/DiscountComponent/DiscountComponent";
+import BreakDownComponent from "./components/BreakDownComponent/BreakDownComponent";
 
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
             <Route path="/Invite" element={<InviteFriends/>}/>
             <Route path="/messages" element={<UserMessageComponent/>}/>
             <Route path="/discounts" element={<DiscountComponent/>}/>
+            <Route path="/breakdown" element={<BreakDownComponent/>}/>
             <Route path="/*" element={<Navigate to="/login" />} />
 
           </Routes>

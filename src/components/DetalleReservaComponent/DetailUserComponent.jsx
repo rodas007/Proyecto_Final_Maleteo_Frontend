@@ -80,14 +80,18 @@ const DetalleReservaComponent = () => {
           </div>
           <div className='normas'>
             <div>
+              <div className='normas-cont'>
               <p>
-                Cormas de Marta
+                Normas de Marta
               </p>
+              <p>Puntualidad</p>
+              </div>
             </div>
             <div className='normas-cont'>
               <p>
-                Cómo debe ser tu maleta
+                ¿Cómo debe ser tu maleta?
               </p>
+              <p>No debe exceder los 20kg</p>
             </div>
             <div className='normas-cont'>
               <p>
@@ -102,12 +106,13 @@ const DetalleReservaComponent = () => {
                 Coste total
               </p>
               <p className='normas-cont-text'>12€</p>
-              <a className='normas-cont-a' href="Desglose">Desglose</a>
+            <Link to="/breakdown"> <a className='normas-cont-a' href="Desglose">Desglose</a></Link>
             </div>
             <div className='normas-cont'>
-              <p>
-                ¿Necesitas ayuda?
-              </p>
+              
+             <p>¿Necesitas ayuda?</p>
+            
+              <a href="customerservice@maleteo.com">customerservice@maleteo.com</a>
             </div>
 
           </div>
