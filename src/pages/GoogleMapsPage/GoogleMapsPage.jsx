@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import localizacion from "../../assets/images/ubicacion.png";
@@ -6,8 +6,8 @@ import GuardianSlider from "../../components/GuardlianSlider/GuardianSlider";
 import iconback from "../../assets/images/whiteback.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
-import { NewsComponent } from "../../components/NewsComponent/NewsComponent";
-import SliderHome from "../../components/SliderHome/SliderHome";
+import { LoadingContext } from "../../context/LoadingContext";
+import Loading from "../../components/Loading/Loading";
 const containerStyle = {
   width: '414px',
   height: '736px'
@@ -17,13 +17,13 @@ const containerStyle = {
 
 
 export default function GoogleMapsPage() {
-  
+  const { setIsLoading } = useContext(LoadingContext);
   
     const { isLoaded } = useLoadScript({
       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
     });
   
-    if (!isLoaded) return <div>Loading...</div>;
+    if (!isLoaded) return <Loading/>;
     return <Map />;
   }
   

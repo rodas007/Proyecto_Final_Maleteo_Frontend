@@ -1,17 +1,19 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { API } from '../../services/api';
 
 import "./RegisterComponent.scss";
 
 export function RegisterComponent() {
- 
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
 
   const onSubmit = formData => {
     API.post('register', formData).then(res => {
         console.log('Register user',);
+        navigate('/login');
     })
 }
 
@@ -52,7 +54,7 @@ export function RegisterComponent() {
           
         </label>
         <label className="c-register__label" htmlFor="LastName">
-          <span className="b-subtitle">Apellido</span>
+          <span className="b-subtitle">Apellidos</span>
 
           <input
             className="c-register__input"

@@ -33,17 +33,22 @@ import InviteFriends from "./pages/InviteFriends/InviteFriends";
 import UserMessageComponent from "./components/UserMessageComponent/UserMessageComponent";
 import { DiscountComponent } from "./components/DiscountComponent/DiscountComponent";
 import BreakDownComponent from "./components/BreakDownComponent/BreakDownComponent";
+import Loading from "./components/Loading/Loading";
+import { LoadingContext } from "./context/LoadingContext";
 
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token") || null);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <JwtContext.Provider value={{ jwt, setJwt }}>
       <Router>
+      <Loading isLoading={isLoading} />
+
         <div className="">
        
-               
+        <LoadingContext.Provider value={{ setIsLoading }}>
                 
           <Routes>
           
@@ -84,6 +89,7 @@ function App() {
             <Route path="/*" element={<Navigate to="/login" />} />
 
           </Routes>
+          </LoadingContext.Provider>
         </div>
       </Router>
     </JwtContext.Provider>

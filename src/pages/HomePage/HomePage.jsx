@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { environment } from "../../environments/environment";
 import axios from "axios";
 import "./Homepage.scss";
@@ -12,6 +12,7 @@ import SliderHome from "../../components/SliderHome/SliderHome";
 import { InputComponent } from "../../components/InputComponent/InputComponent";
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
+import { LoadingContext } from "../../context/LoadingContext";
 
 
 
@@ -19,6 +20,7 @@ export default function HomePage() {
   const [experiences, setExperiences] = useState();
   const [novedades, setNovedades] = useState();
   const [expLimit, setExpLimit] = useState(1);
+  const { setIsLoading } = useContext(LoadingContext);
   const moment = new Date();
   
   const [dateDeposit, setDateDeposit] = useState();
@@ -32,9 +34,12 @@ export default function HomePage() {
 
   useEffect(() => {
     const getNews = async () => {
+      setIsLoading(true);
       const res = await axios.get(`${environment.url}novedades`);
+      
       setNovedades(res.data);
       console.log(res.data);
+      setIsLoading(false);
     };
 
     getNews();
@@ -42,11 +47,14 @@ export default function HomePage() {
 
 
     const getExp = async (limit = 2) => {
+      setIsLoading(true);
       const res = await axios.get(
         `${environment.url}experiencias?limit=${limit}`
       );
+      
       setExperiences(res.data.docs);
       console.log(res.data);
+      setIsLoading(false);
     };
 
 
