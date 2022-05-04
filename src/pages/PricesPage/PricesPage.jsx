@@ -2,7 +2,7 @@ import React from "react";
 import './PricesPage.scss'
 
 import { ArrowBackComponent } from "../../components/ArrowBackComponent/ArrowBackComponent";
-import { NavComponent } from "../../components/NavComponent/NavComponent";
+
 import { Link } from "react-router-dom";
 
 export function PricesPage() {
@@ -38,7 +38,7 @@ export function PricesPage() {
                 </div>
 
                 <div>
-                    <NavComponent />
+                    
                 </div>
             </div>
      
