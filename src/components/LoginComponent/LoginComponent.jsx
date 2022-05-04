@@ -27,7 +27,7 @@ export default function LoginComponent() {
         <label className="c-login__label" htmlFor="email">
           <span className="b-subtitle">Direccion de correo electronico</span>
 
-          <input className="c-login__input" type="text" placeholder="Email"  id="email" defaultValue="test@test.com"
+          <input className="c-login__input" type="text" placeholder="Email"  id="email" defaultValue="carlos@gmail.com"
               {...register("email", {
                 required: true,
                 pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,

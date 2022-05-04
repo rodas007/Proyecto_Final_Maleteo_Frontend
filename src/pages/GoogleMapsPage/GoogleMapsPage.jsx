@@ -4,6 +4,7 @@ import { NavComponent } from "../../components/NavComponent/NavComponent";
 import localizacion from "../../assets/images/ubicacion.png";
 import GuardianSlider from "../../components/GuardlianSlider/GuardianSlider";
 import iconback from "../../assets/images/whiteback.png";
+import iconhouse from "../../assets/images/markGoogle.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
 import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
@@ -34,8 +35,12 @@ export default function GoogleMapsPage() {
     useEffect ( ( )  =>  setIsMounted ( true ) ,  [ ] ) ;
     const  [ isMounted ,  setIsMounted ]  =  useState ( false ) ;
     const center = useMemo(() => ({ lat: 40.4167, lng: -3.70325 }), []);
-    const centerTest = useMemo(() => ({ lat: 40.4167, lng: -3.70800 }), []);
-    const centerTest2 = useMemo(() => ({ lat: 40.4195, lng: -3.70900 }), []);
+    const markicon1 = useMemo(() => ({ lat: 40.4167, lng: -3.70800 }), []);
+    const markicon2  = useMemo(() => ({ lat: 40.4195, lng: -3.70400 }), []);
+    const markicon3  = useMemo(() => ({ lat: 40.4195, lng: -3.70900 }), []);
+    const markicon4  = useMemo(() => ({ lat: 40.4250, lng: -3.70800 }), []);
+    const markicon5  = useMemo(() => ({ lat: 40.4250, lng: -3.71200 }), []);
+    const markicon6  = useMemo(() => ({ lat: 40.4195, lng: -3.70900 }), []);
   
 
 
@@ -53,9 +58,13 @@ export default function GoogleMapsPage() {
       <div className="b-Mapa">
   
       <GoogleMap zoom={15} center={center} mapContainerStyle={containerStyle}>
-      {isMounted && <Marker position={center} />}
-       {isMounted && <Marker position={centerTest} />}
-       {isMounted && <Marker position={centerTest2} />}
+      {isMounted && <Marker position={center} icon={iconhouse} />}
+       {isMounted && <Marker position={ markicon1} icon={iconhouse} />}
+       {isMounted && <Marker position={ markicon2} icon={iconhouse} />}
+        {isMounted && <Marker position={ markicon3} icon={iconhouse} />}
+        {isMounted && <Marker position={ markicon4} icon={iconhouse} />}
+        {isMounted && <Marker position={ markicon5} icon={iconhouse} />}
+        {isMounted && <Marker position={ markicon6} icon={iconhouse} />}
       
       </GoogleMap>
       <GuardianSlider/>

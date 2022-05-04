@@ -21,8 +21,8 @@ const FichaComponent = () => {
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => (swiper)}
+          onSlideChange={() => ("slide change")}
         >
           <SwiperSlide>
             <img
@@ -130,7 +130,7 @@ const FichaComponent = () => {
         <h3>Ubicacion</h3>
         <img
           className="ubicacion-img"
-          src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg"
+          src="https://i.gyazo.com/93b8562de07eec463d338d49073d4e19.png"
           alt=""
         />
       </div>

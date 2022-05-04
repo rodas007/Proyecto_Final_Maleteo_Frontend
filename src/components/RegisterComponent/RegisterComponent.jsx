@@ -12,7 +12,7 @@ export function RegisterComponent() {
 
   const onSubmit = formData => {
     API.post('register', formData).then(res => {
-        console.log('Register user',);
+       /*  console.log('Register user',); */
         navigate('/login');
     })
 }
@@ -76,7 +76,7 @@ export function RegisterComponent() {
             type="password"
             name="password"
               placeholder="Contraseña"
-              defaultValue={"ABCabc123"}
+              defaultValue={"ABCedf123"}
               {...register("password", {
                 required: true,
                 pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,

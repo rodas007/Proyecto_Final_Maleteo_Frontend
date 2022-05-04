@@ -18,9 +18,9 @@ const DetalleEspacio = ({ data }) => {
 
   const onSubmit = (formData) => {
     const datosForm= {...formData,...data};
-    console.log(datosForm);
+    /* console.log(datosForm); */
      API.post("espacios", datosForm).then((res) => {
-      console.log("Register espacios");
+     /*  console.log("Register espacios"); */
       navigate('/config');
      
     }); 

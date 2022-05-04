@@ -21,8 +21,8 @@ const AdsGuardian = () => {
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => (swiper)}
+          onSlideChange={() => ("slide change")}
         >
           <SwiperSlide>
             <img

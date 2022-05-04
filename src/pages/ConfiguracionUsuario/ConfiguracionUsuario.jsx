@@ -16,7 +16,7 @@ const ConfiguracionUsuario = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const onGuardian = () => {
     API.patch(`users/${user._id}`, { role: "admin" }).then((res) => {
-      console.log("Register user as Guardian");
+      /* console.log("Register user as Guardian"); */
       navigate("/login");
     });
   };

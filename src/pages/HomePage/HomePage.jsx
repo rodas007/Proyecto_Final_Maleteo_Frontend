@@ -33,9 +33,9 @@ export default function HomePage() {
   const [numBaggage, SetNumBaggage] = useState([]);
   
   
-  console.log("DESPOSITO",dateDeposit);
+  /* console.log("DESPOSITO",dateDeposit);
   console.log("RECOGIDA",dateCollect);
-  console.log("numero maletas",numBaggage);
+  console.log("numero maletas",numBaggage); */
 
   useEffect(() => {
     const getNews = async () => {
@@ -45,7 +45,7 @@ export default function HomePage() {
       const res = await axios.get(`${environment.url}novedades`);
       
       setNovedades(res.data);
-      console.log(res.data);
+      /* console.log(res.data); */
       setIsLoading(false);
     };
 
@@ -60,7 +60,7 @@ export default function HomePage() {
       );
       
       setExperiences(res.data.docs);
-      console.log(res.data);
+      /* console.log(res.data); */
       setIsLoading(false);
     };
 

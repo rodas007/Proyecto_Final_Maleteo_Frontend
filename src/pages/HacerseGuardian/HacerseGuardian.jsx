@@ -17,11 +17,11 @@ const HacerseGuardian = () => {
 
 
   const { register, handleSubmit } = useForm();
-console.log(register);
+/* console.log(register); */
 
 
   const onSubmit = formData => {
-    console.log(formData);
+    /* console.log(formData); */
     setForm(true);
     setData(formData);
    

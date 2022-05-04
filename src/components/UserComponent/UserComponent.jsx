@@ -10,7 +10,7 @@ export default function UsersComponenet () {
 
     useEffect(() => {
         API.get('users').then(res => {
-            console.log('>> default >>  res', res);
+            /* console.log('>> default >>  res', res); */
             setUsers(res.data.docs);
         })
     }, []) 

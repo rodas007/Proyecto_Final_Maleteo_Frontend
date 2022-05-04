@@ -12,7 +12,7 @@ import "./SliderHome.scss";
 
 const SliderHome = ({novedades}) => {
 
-console.log("NOVEDAD 1",novedades)
+/* console.log("NOVEDAD 1",novedades) */
   return (
     <div className="c-slider">
     <h1 className="c-slider__text">Novedades</h1>
@@ -22,8 +22,8 @@ console.log("NOVEDAD 1",novedades)
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => (swiper)}
+          onSlideChange={() => ("slide change")}
         >
 
 {novedades?.map((novedad)=>
