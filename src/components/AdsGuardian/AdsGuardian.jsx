@@ -1,4 +1,4 @@
-import "./FichaComponent.scss";
+import "./AdsGuardian.scss";
 
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,14 +7,14 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { ArrowBackComponent } from "../ArrowBackComponent/ArrowBackComponent";
 
-const FichaComponent = () => {
+const AdsGuardian = () => {
 
   const user = JSON.parse(localStorage.getItem("user"));
   return (
     <>
     {user.role === "admin" ? (
-    <Link to="/config"><ArrowBackComponent/></Link>) : (
-    <Link to="/maps"><ArrowBackComponent/></Link>)}
+    <Link to="/tusanuncios"><ArrowBackComponent/></Link>) : (
+    <Link to="/home"><ArrowBackComponent/></Link>)}
       <div className="c-box">
         <Swiper
           modules={[Pagination]}
@@ -227,4 +227,4 @@ const FichaComponent = () => {
   );
 };
 
-export default FichaComponent;
+export default AdsGuardian;

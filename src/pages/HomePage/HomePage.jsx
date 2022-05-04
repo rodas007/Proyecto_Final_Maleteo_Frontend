@@ -13,10 +13,15 @@ import { InputComponent } from "../../components/InputComponent/InputComponent";
 import { Calendar } from 'primereact/calendar';
 import { Dropdown } from 'primereact/dropdown';
 import { LoadingContext } from "../../context/LoadingContext";
-
+import { API } from "../../services/api";
+import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
 
 
 export default function HomePage() {
+
+  const user = JSON.parse(localStorage.getItem("user"));
+ 
+  
   const [experiences, setExperiences] = useState();
   const [novedades, setNovedades] = useState();
   const [expLimit, setExpLimit] = useState(1);
@@ -34,6 +39,8 @@ export default function HomePage() {
 
   useEffect(() => {
     const getNews = async () => {
+
+      
       setIsLoading(true);
       const res = await axios.get(`${environment.url}novedades`);
       
@@ -120,7 +127,7 @@ export default function HomePage() {
       {/* <NewsComponent novedades={novedades} /> */}
       <ExperienceComponent experiences={experiences} />
       <button className="b-btn home__button"onClick={() => changePage(expLimit + 2)}  >Mostrar más</button>
-      <NavComponent />
+      {user.role === "admin" ?  <NavbarGuardian/> : <NavComponent />}
     </div>
   );
 }

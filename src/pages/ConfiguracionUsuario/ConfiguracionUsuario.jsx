@@ -1,19 +1,21 @@
-import React, {  useState} from "react";
+import React  from "react";
 import fotoMarta from "../../assets/images/fotoMarta.png";
 import { Link } from "react-router-dom";
 import "./ConfiguracionUsuario.scss";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
-import UsersComponenet from "../../components/UserComponent/UserComponent";
+import { useNavigate } from "react-router-dom";
 import AuthButton from "../../components/AuthButton/AuthButton";
 import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
 import { API } from "../../services/api";
 
 const ConfiguracionUsuario = () => {
-  const [show, setShow] = useState(false);
+  const navigate = useNavigate();
+
   const user = JSON.parse(localStorage.getItem("user"));
   const onGuardian = () => {
     API.patch(`users/${user._id}`, { role: "admin" }).then((res) => {
         console.log("Register user as Guardian");
+        navigate('/login');
     });
 };
 
@@ -24,24 +26,50 @@ const ConfiguracionUsuario = () => {
       <div className="b-General">
         <div className="b-div1">
           <div className="b-divuser">
-            <Link className="linkto" to="/detalleusuario">
+          {user.role === "admin" ? (
+            <Link className="linkto" to="/ficha">
               <h1 className="b-nombre">Hola, {user.name}</h1>
               <p className="b-text">Puedes ver y editar tu perfil</p>
-            </Link>
+            </Link> 
+          ):(
+
+            
+              <h1 className="b-nombre">Hola, {user.name}</h1>
+              
+            
+          )}
           </div>
           <div className="foto-usurario">
             <img className="fotoMarta" src={fotoMarta}></img>
           </div>
-
+          {user.role === "admin" ? (
           <div className="b-subtitle">
             <h3 onClick={() => {
-          setShow(!show);onGuardian();
-        }} >Conviértete en guardian {show ? '' : ''} </h3>
-            <p className="b-text">Puedes ganar desde 400e de media al mes</p>
+          onGuardian();
+        }} >Ahora eres un guardian </h3>
+            <p className="b-text">Publica un anuncio y gana desde 400€ de media al mes</p>
             <p className="b-line"></p>
           </div>
-        </div>
+          ) : (
+            <div className="b-subtitle">
+            <h3 onClick={() => {
+          onGuardian();
+        }} >Conviértete en guardian </h3>
+            <p className="b-text">Puedes ganar desde 400€ de media al mes</p>
+            <p className="b-line"></p>
+          </div>)}
 
+        </div>
+        {user.role === "admin" ? (
+        <Link className="linkto" to="/newadd">
+        
+          <div className="b-subtitle">
+            <h3>Publica tu anuncio</h3>
+            <p className="b-line"></p>
+          </div>
+        </Link>
+        ) : <></>}
+        
         <div className="b-subtitle">
         <Link className="linkto" to="/invite">
           <h3>Invita a tus amigos</h3>
@@ -55,19 +83,8 @@ const ConfiguracionUsuario = () => {
           </Link>
           <p className="b-line"></p>
         </div>
-        {show ? (
-        <Link className="linkto" to="/hacerseguardian">
+     
         
-          <div className="b-subtitle">
-            <h3>Publica tu anuncio o experiencia</h3>
-            <p className="b-line"></p>
-          </div>
-        </Link>
-        ) : <></>}
-        <div className="b-subtitle">
-          <h3>Configuración</h3>
-          <p className="b-line"></p>
-        </div>
         <div className="b-subtitle">
         <Link className="linkto" to="/help">
           <h3>Ayuda</h3>

@@ -22,7 +22,7 @@ const PeticionDeReservaComponent = () => {
             <p className='pet-cont-text-s'>Recogida - 30 de Julio. 20:00</p>
             </div>
             <div className='pet-cont-btn'>
-            <button className='pet-cont-btn-b'>Aceptar</button>
+            <Link to="/confirmaciondereserva"> <button className='pet-cont-btn-b'>Aceptar</button></Link>
             <a className='pet-cont-btn-a'href="declinar">Declinar</a>
             </div>
         </div>

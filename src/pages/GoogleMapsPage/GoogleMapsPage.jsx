@@ -1,4 +1,4 @@
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import { NavComponent } from "../../components/NavComponent/NavComponent";
 import localizacion from "../../assets/images/ubicacion.png";
@@ -6,7 +6,8 @@ import GuardianSlider from "../../components/GuardlianSlider/GuardianSlider";
 import iconback from "../../assets/images/whiteback.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
-import { LoadingContext } from "../../context/LoadingContext";
+import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
+
 import Loading from "../../components/Loading/Loading";
 const containerStyle = {
   width: '414px',
@@ -17,7 +18,7 @@ const containerStyle = {
 
 
 export default function GoogleMapsPage() {
-  const { setIsLoading } = useContext(LoadingContext);
+  
   
     const { isLoaded } = useLoadScript({
       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
@@ -29,6 +30,7 @@ export default function GoogleMapsPage() {
   }
   
   function Map() {
+    const user = JSON.parse(localStorage.getItem("user"));
     useEffect ( ( )  =>  setIsMounted ( true ) ,  [ ] ) ;
     const  [ isMounted ,  setIsMounted ]  =  useState ( false ) ;
     const center = useMemo(() => ({ lat: 40.4167, lng: -3.70325 }), []);
@@ -51,14 +53,14 @@ export default function GoogleMapsPage() {
       <div className="b-Mapa">
   
       <GoogleMap zoom={15} center={center} mapContainerStyle={containerStyle}>
-       {isMounted && <Marker position={center} />}
+      {isMounted && <Marker position={center} />}
        {isMounted && <Marker position={centerTest} />}
        {isMounted && <Marker position={centerTest2} />}
       
       </GoogleMap>
       <GuardianSlider/>
       <div className="c-navcomponent">
-      <NavComponent/>
+      {user.role === "admin" ?  <NavbarGuardian/> : <NavComponent />}
       </div>
       </div>
       </>

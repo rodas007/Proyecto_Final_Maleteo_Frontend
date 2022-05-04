@@ -17,7 +17,7 @@ export const NavbarGuardian = () => {
           <Link to="/tusanuncios" >
           <img src={anuncio} className="c-nav__search" alt="Anuncio" />
           </Link>
-          <Link to="/" >
+          <Link to="/peticiondereserva" >
           <img src={calendar} className="c-nav__chat" alt="Calendar" />
           </Link>
           <Link to="/config" >

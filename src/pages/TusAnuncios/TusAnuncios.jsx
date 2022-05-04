@@ -14,7 +14,7 @@ const TusAnuncios = () => {
         <h4 className="hall">El hall de Marta</h4>
         <p className="completo">Anuncio completado al 100%</p>
       </div>
-
+      <Link to="/adsguardian">
       <div className="Fotoprincipal">
         <img
           className="primeraFoto"
@@ -25,12 +25,14 @@ const TusAnuncios = () => {
           <img src={iconoback}></img>
         </button>
       </div>
+      </Link>
       <div className="añade-espacio">
         <h5 className="b-espacio">Añade otro espacio</h5>
-
+        <Link to="/newadd">
         <button className="btn-mas">
           <img src={iconomas}></img>
         </button>
+        </Link>
       </div>
     </div>
   )

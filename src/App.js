@@ -35,6 +35,7 @@ import { DiscountComponent } from "./components/DiscountComponent/DiscountCompon
 import BreakDownComponent from "./components/BreakDownComponent/BreakDownComponent";
 import Loading from "./components/Loading/Loading";
 import { LoadingContext } from "./context/LoadingContext";
+import AdsGuardian from "./components/AdsGuardian/AdsGuardian";
 
 
 function App() {
@@ -74,7 +75,7 @@ function App() {
               element={<ConfirmacionDeReservaComponent />}
             />
             <Route path="/tusanuncios" element={<TusAnuncios />} />
-            <Route path="/hacerseguardian" element={<HacerseGuardian />} />
+            <Route path="/newadd" element={<HacerseGuardian />} />
             <Route path="/guardianslider" element={<GuardianSlider/>}/>
            
             <Route path="/detalleespacio" element={<DetalleEspacio />} />
@@ -86,6 +87,7 @@ function App() {
             <Route path="/messages" element={<UserMessageComponent/>}/>
             <Route path="/discounts" element={<DiscountComponent/>}/>
             <Route path="/breakdown" element={<BreakDownComponent/>}/>
+            <Route path="/adsguardian" element={<AdsGuardian/>}/>
             <Route path="/*" element={<Navigate to="/login" />} />
 
           </Routes>

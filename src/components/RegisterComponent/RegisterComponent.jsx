@@ -76,7 +76,7 @@ export function RegisterComponent() {
             type="password"
             name="password"
               placeholder="Contraseña"
-              defaultValue={""}
+              defaultValue={"ABCabc123"}
               {...register("password", {
                 required: true,
                 pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,

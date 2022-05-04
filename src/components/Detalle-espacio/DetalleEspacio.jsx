@@ -21,7 +21,7 @@ const DetalleEspacio = ({ data }) => {
     console.log(datosForm);
      API.post("espacios", datosForm).then((res) => {
       console.log("Register espacios");
-      navigate('/tusanuncios');
+      navigate('/config');
      
     }); 
    /*  console.log(formData); */
@@ -46,7 +46,7 @@ const DetalleEspacio = ({ data }) => {
 
   return (
     <div className="c-espacio">
-      <Link to="/hacerseguardian">
+      <Link to="/newadd">
         <ArrowBackComponent />
       </Link>
 
