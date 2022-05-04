@@ -1,6 +1,7 @@
 .switch{
   display: flex;
   justify-content: space-around;
+  list-style-type:none;
   &__text{
     display: block;
     font-size: 1.3em;

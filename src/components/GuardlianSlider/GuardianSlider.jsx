@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import Swiper, { Pagination } from "swiper";
 import { useEffect } from 'react';
 import fotomarta from "../../assets/images/fotoMarta.png";
+import { Link } from 'react-router-dom';
 
 const GuardianSlider = () => {
     useEffect(() => {
@@ -24,13 +25,13 @@ const GuardianSlider = () => {
     <section className="c-guardian__section swiper-wrapper">
         
     <div className="c-guardian__ficha  swiper-slide">
-      <div className="c-guardian__fotobox">
+    <Link to="/ficha"> <div className="c-guardian__fotobox">
         <img
           className="c-guardian__img"
           src="https://www.espaciosadaptados.com/images/rustic-dining-room-PH8RJ27.jpg"
           alt="foto1"
         ></img>
-      </div>
+      </div> </Link>
       <div className="c-guardian__info">
         <h1 className="c-guardian__nombre">Marta</h1>
         <img

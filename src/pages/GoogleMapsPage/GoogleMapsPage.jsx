@@ -6,8 +6,9 @@ import GuardianSlider from "../../components/GuardlianSlider/GuardianSlider";
 import iconback from "../../assets/images/whiteback.png";
 import "./GoogleMapsPage.scss";
 import { Link } from "react-router-dom";
-import { NewsComponent } from "../../components/NewsComponent/NewsComponent";
-import SliderHome from "../../components/SliderHome/SliderHome";
+import { NavbarGuardian } from "../../components/NavbarGuardian/NavbarGuardian";
+
+import Loading from "../../components/Loading/Loading";
 const containerStyle = {
   width: '414px',
   height: '736px'
@@ -21,13 +22,15 @@ export default function GoogleMapsPage() {
   
     const { isLoaded } = useLoadScript({
       googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS,
+      
     });
   
-    if (!isLoaded) return <div>Loading...</div>;
+    if (!isLoaded) return <Loading/>;
     return <Map />;
   }
   
   function Map() {
+    const user = JSON.parse(localStorage.getItem("user"));
     useEffect ( ( )  =>  setIsMounted ( true ) ,  [ ] ) ;
     const  [ isMounted ,  setIsMounted ]  =  useState ( false ) ;
     const center = useMemo(() => ({ lat: 40.4167, lng: -3.70325 }), []);
@@ -50,15 +53,21 @@ export default function GoogleMapsPage() {
       <div className="b-Mapa">
   
       <GoogleMap zoom={15} center={center} mapContainerStyle={containerStyle}>
-       {isMounted && <Marker position={center} />}
+      {isMounted && <Marker position={center} />}
        {isMounted && <Marker position={centerTest} />}
        {isMounted && <Marker position={centerTest2} />}
       
       </GoogleMap>
       <GuardianSlider/>
+<<<<<<< HEAD
       <div className="b-navegador1">
       <NavComponent/></div>
       
+=======
+      <div className="c-navcomponent">
+      {user.role === "admin" ?  <NavbarGuardian/> : <NavComponent />}
+      </div>
+>>>>>>> b132268d13059c451bc5e17fcef5b47fca5d5775
       </div>
       </>
     );

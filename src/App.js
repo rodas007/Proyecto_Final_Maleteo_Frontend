@@ -33,17 +33,23 @@ import InviteFriends from "./pages/InviteFriends/InviteFriends";
 import UserMessageComponent from "./components/UserMessageComponent/UserMessageComponent";
 import { DiscountComponent } from "./components/DiscountComponent/DiscountComponent";
 import BreakDownComponent from "./components/BreakDownComponent/BreakDownComponent";
+import Loading from "./components/Loading/Loading";
+import { LoadingContext } from "./context/LoadingContext";
+import AdsGuardian from "./components/AdsGuardian/AdsGuardian";
 
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token") || null);
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <JwtContext.Provider value={{ jwt, setJwt }}>
       <Router>
+      <Loading isLoading={isLoading} />
+
         <div className="">
        
-               
+        <LoadingContext.Provider value={{ setIsLoading }}>
                 
           <Routes>
           
@@ -69,7 +75,7 @@ function App() {
               element={<ConfirmacionDeReservaComponent />}
             />
             <Route path="/tusanuncios" element={<TusAnuncios />} />
-            <Route path="/hacerseguardian" element={<HacerseGuardian />} />
+            <Route path="/newadd" element={<HacerseGuardian />} />
             <Route path="/guardianslider" element={<GuardianSlider/>}/>
            
             <Route path="/detalleespacio" element={<DetalleEspacio />} />
@@ -81,9 +87,11 @@ function App() {
             <Route path="/messages" element={<UserMessageComponent/>}/>
             <Route path="/discounts" element={<DiscountComponent/>}/>
             <Route path="/breakdown" element={<BreakDownComponent/>}/>
+            <Route path="/adsguardian" element={<AdsGuardian/>}/>
             <Route path="/*" element={<Navigate to="/login" />} />
 
           </Routes>
+          </LoadingContext.Provider>
         </div>
       </Router>
     </JwtContext.Provider>

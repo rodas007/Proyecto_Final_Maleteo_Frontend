@@ -10,6 +10,7 @@ import DetalleEspacio from "../../components/Detalle-espacio/DetalleEspacio";
 
 const HacerseGuardian = () => {
 
+ 
   const [data, setData] = useState();
  const [form, setForm] = useState(false);
 
@@ -23,6 +24,7 @@ console.log(register);
     console.log(formData);
     setForm(true);
     setData(formData);
+   
    /*  API.post('espacios', formData).then(res => {
         console.log('Register espacios',);
     }) */

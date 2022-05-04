@@ -6,11 +6,14 @@ import { Link } from 'react-router-dom';
 const ConfirmacionDeReservaComponent = () => {
 
   const user = JSON.parse(localStorage.getItem("user"));
+
   return (
       <>
     <div className='conf'>
-    <Link to="/messages" ><ArrowBackComponent/> </Link>
-    <div className='head'> <div className='head-text'>{user.name}</div> </div>
+    {user.role === "admin" ? (
+    <Link to="/peticiondereserva" ><ArrowBackComponent/> </Link> ) : (
+    <Link to="/messages" ><ArrowBackComponent/> </Link> )}
+    <div className='head'> <div className='head-text'>CARLOS</div> </div>
     <div className='cont-1'>
         <div className='cont-1-res'>
         <h3 className='cont-1-res-t'>Reserva confirmada</h3>

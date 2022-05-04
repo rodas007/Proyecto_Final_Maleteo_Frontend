@@ -18,7 +18,7 @@ export function RegisterPage() {
       <div className="correo">
       <span className="p-subtitle">O utiliza tu correo electronico</span>
       </div>
-      <RegisterComponent/>
+      <RegisterComponent />
     </div>
   );
 }

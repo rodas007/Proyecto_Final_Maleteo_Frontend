@@ -1,17 +1,19 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { API } from '../../services/api';
 
 import "./RegisterComponent.scss";
 
 export function RegisterComponent() {
- 
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
 
   const onSubmit = formData => {
     API.post('register', formData).then(res => {
         console.log('Register user',);
+        navigate('/login');
     })
 }
 
@@ -42,7 +44,7 @@ export function RegisterComponent() {
 
           <input
             className="c-register__input"
-            placeholder="Name"
+            placeholder="Nombre"
               id="name"
               defaultValue=""
               {...register("name", {
@@ -52,11 +54,11 @@ export function RegisterComponent() {
           
         </label>
         <label className="c-register__label" htmlFor="LastName">
-          <span className="b-subtitle">Apellido</span>
+          <span className="b-subtitle">Apellidos</span>
 
           <input
             className="c-register__input"
-            placeholder="SurName"
+            placeholder="Apellidos"
               id="surname"
               defaultValue=""
               {...register("surname", {
@@ -73,8 +75,8 @@ export function RegisterComponent() {
             id="password"
             type="password"
             name="password"
-              placeholder="password"
-              defaultValue={""}
+              placeholder="Contraseña"
+              defaultValue={"ABCabc123"}
               {...register("password", {
                 required: true,
                 pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
